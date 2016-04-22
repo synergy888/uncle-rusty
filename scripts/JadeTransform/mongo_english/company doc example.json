@@ -1,0 +1,28 @@
+Generic company document.
+See additional docs for product specific information
+
+{
+    "code" : "holcimecuador", //string value.  Not editable
+    "description" : "Holcim Ecuador", //string value
+    "status" : "active", //This should be a set list of option.  Likely Active/inactive are the only valid actions
+    "branding" : { //These should be edited via the UI.  Perhaps default the values for colors and store, but I would not show branding options at the prompt
+        "primary" : "@color-primary: #FF1100;", 
+        "secondary" : "@color-secondary: #8B8D8E;",
+        "text_primary" : "@text-primary: #ffffff;",
+        "text_secondary" : "@text-secondary: #FF1100;",
+        "logo" : "", //base64 image string
+        "small_Logo" : "" //base 64 image string
+    },
+    "settings" : { //There are additional values that should show up here.  Ticket and Hauler both have some things that would be relevant here
+        "communications" : {
+            "email" : {
+                "from" : {
+                    "name" : "Holcim Ecuador En Linea", //string
+                    "value" : "Orders@holcim.com" //This should be an email type string
+                }
+            }
+        }
+		cloudstore: "false"  //This is generic flag that determines if commerce can access tickets stored in the cloud. This is only for commerce or ticket products
+    },
+    "products" : [  ]
+}

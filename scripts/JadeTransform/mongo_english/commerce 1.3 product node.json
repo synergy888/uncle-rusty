@@ -1,0 +1,75 @@
+{
+    "code" : "commerce",
+    "settings" : {
+        "environment" : "alpha",  //string.  This is a known set of values.
+        "dataEndPoints" : {
+            "LegacyDataService" : {
+                "EndPointAddress" : "http://201.234.199.99",  //string address
+                "Port" : 35243, //int
+                "Type" : "REST",  //this is always the same for this node so i would not show or allow dataentry for this
+                "SubType" : "Client"  //Again this will always be the same for DS so i would not show the end user - just use this value
+            },
+            "SocketEndPoint" : { //This does not change from company to company.  Always the same for a product.  Do not show client
+                "EndPointAddress" : "http://127.0.0.1", //string address
+                "Port" : 4001,
+                "Type" : "REST",
+                "SubType" : "Server"
+            }
+        },
+        "documentsConfig" : {
+            "providerAddress" : "<DOCUMENT IMAGE SERVER ADDRESS>", //string
+            "documentsUseChecksum" : false,
+            "documents" : { //these values are known and unchanging from company to company.  What determines this is the document service provider.
+                "ticketUrl" : "KT103_0_0_0={ticketCode}&KT102_0_0_0={customerCode}&clienttype=html&cqid=106&filetype=PDF",
+                "invoiceUrl" : "KT106_0_0_0={invoiceNumber}&KT102_0_0_0={customerCode}&clienttype=html&cqid=105&filetype=PDF",
+                "invoiceByDateUrl" : "KT102_0_0_0={customerCode}&ToDate={toDate}&FromDate={fromDate}&clienttype=html&cqid=105&filetype=PDF",
+                "invoiceByProjectByDateUrl" : "KT102_0_0_0={customerCode}&KT107_0_0_0={projectCode}&ToDate={toDate}&FromDate={fromDate}&clienttype=html&cqid=105&filetype=PDF",
+                "checkUrl" : "KT102_0_0_0={customerCode}&KT117_0_0_0={checkNumber}&doctypeid=109&clienttype=html&filetype=PDF",
+                "statementsUrl" : "KT102_0_0_0={customerCode}&ToDate={toDate}&FromDate={fromDate}&clienttype=html&cqid=104&filetype=PDF",
+                "eTicketUrl" : "KT103_0_0_0={ticketCode}&KT102_0_0_0={customerCode}&doctypeid=101&clienttype=html&filetype=PDF",
+                "batchWeightsUrl" : "KT103_0_0_0={ticketCode}&KT102_0_0_0={customerCode}&doctypeid=116&clienttype=html&filetype=PDF"
+            }
+        },
+        "futureOrdersEmail" : {
+            "generateTime" : "0700",
+            "durationTimePeriod" : 3,
+            "template" : "Future Order" //don't show user
+        },
+        "notifications" : {  //only need to prompt for the name and value for the orderRequest node.  This is only if the Order Request is turned on else skip order request data.  The other values in here are all defaults and do not require user input
+            "orderRequest" : {
+                "template" : "Order Request",
+                "to" : {
+                    "name" : "Holcim Ecuador Online",
+                    "value" : "stalin.zurita@holcim.com"
+                }
+            },
+            "orderCreate" : {
+                "template" : "Order Create"
+            },
+            "ticketCreate" : {
+                "template" : "Ticket Create"
+            }
+        },
+        "company" : {
+            "acctInfo" : false,
+            "docImage" : false,
+            "timeZone" : {
+                "defaultRegion" : "USA", ////This is known set of options
+                "name" : "US/Eastern"
+            }
+        },
+        "user" : {
+            "permissions" : {
+                "batchWeights" : false,
+                "truckTimes" : false,
+                "pricing" : false,
+                "mapping" : false,
+                "acctInfo" : false,
+                "docImage" : false,
+                "futureOrderEmail" : false,
+                "changeCustomer" : false,
+                "isAdmin" : false
+            }
+        }
+    }
+},

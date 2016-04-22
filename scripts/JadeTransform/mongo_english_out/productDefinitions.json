@@ -1,0 +1,137 @@
+[
+	{
+		"code": "MobileEcommerce",
+	    "name": "MOBILEcommerce",
+	    "description": "MOBILEcommerce",
+	    "roles": [
+	    	"globaladmin",
+			"appadmin",
+			"appuser"
+	    ],
+        "platforms": {
+            "desktop": "desktop",
+            "mobile": "mobile",
+            "tablet": "desktop"
+        },
+		"settings": {
+        }
+	},
+	{
+		"code": "Mobileticket",
+	    "name": "MOBILEticket",
+	    "description": "MOBILEticket",
+	    "roles": [
+	    	"globaladmin",
+			"appadmin",
+			"appuser"
+	    ],
+        "platforms": {
+            "desktop": "desktop",
+            "mobile": "desktop",
+            "tablet": "desktop"
+        },
+		"settings": {
+        }
+	},
+	{
+		"code": "MobileticketBulk",
+	    "name": "MobileticketBulk",
+	    "description": "MobileticketBulk",
+	    "roles": [
+	    	"globaladmin",
+			"appadmin",
+			"appuser"
+	    ],
+        "platforms": {
+            "desktop": "desktop",
+            "mobile": "desktop",
+            "tablet": "desktop"
+        },
+		"settings": {
+        }
+	},
+    {
+        "code": "jobsite",
+        "name": "MOBILEjobsite",
+        "description": "MOBILEjobsite",
+        "roles": [
+            "globaladmin",
+            "appadmin",
+            "appuser",
+			"ionicadmin"
+        ],
+        "platforms": {
+            "desktop": "mobile",
+            "mobile": "mobile",
+            "tablet": "mobile"
+        },
+		"settings": {
+        }
+    },
+	{
+		"code" : "supply",
+		"name" : "supplyCONNECT",
+		"description" : "supplyCONNECT",
+		"roles" : [ 
+			{
+				"code" : "appAdmin",
+				"name" : "Application Admin",
+				"category" : ""
+			}, 
+			{
+				"code" : "locationadmin",
+				"name" : "Locations Admin",
+				"category" : ""
+			}, 
+			{
+				"code" : "vendoradmin",
+				"name" : "Vendors Admin",
+				"category" : ""
+			}, 
+			{
+				"code" : "materialmgr",
+				"name" : "Material Manager",
+				"category" : "users"
+			}, 
+			{
+				"code" : "plantmgr",
+				"name" : "Plant Manager",
+				"category" : "users"
+			}, 
+			{
+				"code" : "vendor",
+				"name" : "Vendor",
+				"category" : "users"
+			}
+		],
+		"platforms" : {
+			"desktop" : "desktop"
+		},
+		"settings" : {
+			"vendor" : "",
+			"permissions" : {
+				"configure" : "false",
+				"plan" : "false",
+				"alias" : "false"
+			},
+			"locations" : [""]
+		},
+		"appAdmin" : "true"
+	},
+	{
+        "code": "evoadmin",
+        "name": "EVOAdmin",
+        "description": "EVOAdmin",
+        "roles": [
+            "caadmin",
+            "companyadmin"
+        ],
+        "platforms": {
+            "desktop": "desktop",
+            "mobile": "mobile",
+            "tablet": "desktop"
+        },
+		"settings": {
+        }
+    }
+]    

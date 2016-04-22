@@ -1,0 +1,116 @@
+[
+	{
+        "userName": "~Users_userName~",
+        "hash" : "~Users_hash~",
+        "firstName": "~Users_firstName~",
+        "lastName": "~Users_lastName~",
+        "email": "~Users_email~",
+        "passwordLifetime": "~Users_passwordLifetime~",
+        "resetPassword": "~Users_resetPassword~",
+        "loginAttempts": "~Users_loginAttempts~",
+        "lastLogin": "~Users_lastLogin~",
+		"lastLogout": "~Users_lastLogout~",
+		"totalLogins": "~Users_totalLogins~",
+        "status": "~Users_status~",
+        "company": "~Users_company~",
+		"type": "~Users_type~",
+        "products": [
+            {
+                "code": "~Users_products_commerce_code~",
+                "roles": [
+                    "~Users_products_commerce_roles~",
+                    "~Users_products_commerce_roles2~"
+                ],
+                "settings": {
+                    "sms": "~Users_products_commerce_settings_sms~",
+                    "customer": {
+                        "code": "~Users_products_commerce_settings_customer_code~",
+                        "name": "~Users_products_commerce_settings_customer_name~"
+                    },
+                    "sales": ["~Users_products_commerce_settings_sales~"],
+                    "timeZone" : {
+                        "value" : "~Users_products_commerce_settings_timeZone_value~",
+                        "operator" : "~Users_products_commerce_settings_timeZone_operator~",
+                        "hours" : "~Users_products_commerce_settings_timeZone_hours~",
+                        "minutes" : "~Users_products_commerce_settings_timeZone_minutes~"
+                    },
+                    "permissions" : {
+                        "batchWeights": "~Users_products_commerce_settings_permissions_batchWeights~",
+                        "truckTimes": "~Users_products_commerce_settings_permissions_truckTimes~",
+                        "pricing": "~Users_products_commerce_settings_permissions_pricing~",
+                        "mapping": "~Users_products_commerce_settings_permissions_mapping~",
+                        "acctInfo": "~Users_products_commerce_settings_permissions_acctInfo~",
+                        "docImage": "~Users_products_commerce_settings_permissions_docImage~",
+                        "futureOrderEmail": "~Users_products_commerce_settings_permissions_futureOrderEmail~",
+                        "changeCustomer": "~Users_products_commerce_settings_permissions_changeCustomer~",
+                        "isAdmin": "~Users_products_commerce_settings_permissions_isAdmin~",
+						"timeZone" : "~Users_products_commerce_settings_permissions_timeZone~",
+						"advancedOrderRequest" : "~Users_products_commerce_settings_permissions_advancedOrderRequest~",
+						"reports" : "~Users_products_commerce_settings_permissions_reports~"
+                    }
+                }
+            },
+			{
+                "code": "~Users_products_ticket_code~",
+                "roles": "~Users_products_ticket_roles~",
+                "settings" : {
+                    "permissions":{
+                        "isAdmin" : "~Users_products_ticket_settings_permissions_isAdmin~",
+						"legalAdmin": "~Users_products_ticket_settings_permissions_legalAdmin~"
+                    }
+                }
+            },
+            {
+                "code": "~Users_products_bulkticket_code~",
+                "roles": "~Users_products_bulkticket_roles~",
+                "settings" : {
+                    "permissions":{
+                        "isAdmin" : "~Users_products_bulkticket_settings_permissions_isAdmin~",
+                        "legalAdmin": "~Users_products_bulkticket_settings_permissions_legalAdmin~"
+                    }
+                }
+            },
+            {
+                "code": "~Users_products_jobsite_code~",
+                "roles": [
+                    "~Users_products_jobsite_roles~",
+                    "~Users_products_jobsite_roles2~",
+					"~Users_products_jobsite_roles3~"
+                ],
+                "settings": {
+                    "sms": "~Users_products_jobsite_settings_sms~",
+                    "customer": {
+                        "code": "~Users_products_jobsite_settings_customer_code~",
+                        "name": "~Users_products_jobsite_settings_customer_name~"
+                    },
+                    "sales": ["~Users_products_jobsite_settings_sales~"],
+                    "timeZone" : {
+                        "value" : "~Users_products_jobsite_settings_timeZone_value~",
+                        "operator" : "~Users_products_jobsite_settings_timeZone_operator~",
+                        "hours" : "~Users_products_jobsite_settings_timeZone_hours~",
+                        "minutes" : "~Users_products_jobsite_settings_timeZone_minutes~"
+                    },
+                    "permissions" : {
+                        "batchWeights": "~Users_products_jobsite_settings_permissions_batchWeights~",
+                        "truckTimes": "~Users_products_jobsite_settings_permissions_truckTimes~",
+                        "pricing": "~Users_products_jobsite_settings_permissions_pricing~",
+                        "mapping": "~Users_products_jobsite_settings_permissions_mapping~",
+                        "acctInfo": "~Users_products_jobsite_settings_permissions_acctInfo~",
+                        "docImage": "~Users_products_jobsite_settings_permissions_docImage~",
+                        "futureOrderEmail": "~Users_products_jobsite_settings_permissions_futureOrderEmail~",
+                        "changeCustomer": "~Users_products_jobsite_settings_permissions_changeCustomer~",
+                        "isAdmin": "~Users_products_jobsite_settings_permissions_isAdmin~",
+						"timeZone" : "~Users_products_jobsite_settings_permissions_timeZone~",
+						"advancedOrderRequest" : "~Users_products_jobsite_settings_permissions_advancedOrderRequest~",
+						"reports" : "~Users_products_jobsite_settings_permissions_reports~"
+                    }
+                }
+            },
+			{
+				"code": "~Users_products_evoadmin_code~",
+				"roles": ["~Users_products_evoadmin_roles~"],
+				"settings":{}
+			}
+        ]
+    }
+]

@@ -1,0 +1,182 @@
+[
+    {
+        "company": "~templateDefinitions_order_company~",
+        "name": "~templateDefinitions_order_name~",
+        "transport": [
+            {
+                "type": "~templateDefinitions_order_transport_type~",
+                "name": "~templateDefinitions_order_transport_name~",
+                "grouped": "~templateDefinitions_order_transport_grouped~"
+            }
+        ],
+        "bod": [
+            {
+                "name": "~templateDefinitions_order_bod_name~"
+            }
+        ],
+        "formatter": "~templateDefinitions_order_formatter~",
+        "subject": {
+            "type": "~templateDefinitions_order_subject_type~",
+            "value": "~templateDefinitions_order_subject_value~"
+        },
+        "content": {
+            "type": "~templateDefinitions_order_content_type~",
+            "value": "~templateDefinitions_order_content_value~",
+            "attachments": [
+                {
+                    "fileName": "~templateDefinitions_order_content_attachments_fileName~",
+                    "filePath": "~templateDefinitions_order_content_attachments_filePath~",
+                    "cid": "~templateDefinitions_order_content_attachments_cid~"
+                }
+            ]
+        },
+        "active": "~templateDefinitions_order_active~"
+    },
+    {
+        "company": "~templateDefinitions_order_sms_company~",
+        "name": "~templateDefinitions_order_sms_name~",
+        "transport": [
+            {
+                "type": "~templateDefinitions_order_sms_transport_type~",
+                "name": "~templateDefinitions_order_sms_transport_name~",
+                "grouped": "~templateDefinitions_order_sms_transport_grouped~"
+            }
+        ],
+        "bod": [
+            {
+                "name": "~templateDefinitions_order_sms_bod_name~"
+            }
+        ],
+        "formatter": "~templateDefinitions_order_sms_formatter~",
+        "subject": {
+            "type": "~templateDefinitions_order_sms_subject_type~",
+            "value": "~templateDefinitions_order_sms_subject_value~"
+        },
+        "content": {
+            "type": "~templateDefinitions_order_sms_content_type~",
+            "value": "~templateDefinitions_order_sms_content_value~"
+        },
+        "active": "~templateDefinitions_order_sms_active~"
+    },
+    {
+        "company": "~templateDefinitions_ticket_company~",
+        "name": "~templateDefinitions_ticket_name~",
+        "transport": [
+            {
+                "type": "~templateDefinitions_ticket_transport_type~",
+                "name": "~templateDefinitions_ticket_transport_name~",
+                "grouped": "~templateDefinitions_ticket_transport_grouped~"
+            }
+        ],
+        "bod": [
+            {
+                "name": "~templateDefinitions_ticket_bod_name~"
+            }
+        ],
+        "formatter": "~templateDefinitions_ticket_formatter~",
+        "subject": {
+            "type": "~templateDefinitions_ticket_subject_type~",
+            "value": "~templateDefinitions_ticket_subject_value~"
+        },
+        "content": {
+            "type": "~templateDefinitions_ticket_content_type~",
+            "value": "~templateDefinitions_ticket_content_value~",
+            "attachments": [
+                {
+                    "fileName": "~templateDefinitions_ticket_content_attachments_fileName~",
+                    "filePath": "~templateDefinitions_ticket_content_attachments_filePath~",
+                    "cid": "~templateDefinitions_ticket_content_attachments_cid~"
+                }
+            ]
+        },
+        "active": "~templateDefinitions_ticket_active~"
+    },
+    {
+        "company": "~templateDefinitions_ticket_sms_company~",
+        "name": "~templateDefinitions_ticket_sms_name~",
+        "transport": [
+            {
+                "type": "~templateDefinitions_ticket_sms_transport_type~",
+                "name": "~templateDefinitions_ticket_sms_transport_name~",
+                "grouped": "~templateDefinitions_ticket_sms_transport_grouped~"
+            }
+        ],
+        "bod": [
+            {
+                "name": "~templateDefinitions_ticket_sms_bod_name~"
+            }
+        ],
+        "formatter": "~templateDefinitions_ticket_sms_formatter~",
+        "subject": {
+            "type": "~templateDefinitions_ticket_sms_subject_type~",
+            "value": "~templateDefinitions_ticket_sms_subject_value~"
+        },
+        "content": {
+            "type": "~templateDefinitions_ticket_sms_content_type~",
+            "value": "~templateDefinitions_ticket_sms_content_value~"
+        },
+        "active": "~templateDefinitions_ticket_sms_active~"
+    },
+    {
+        "company": "~templateDefinitions_reorder_company~",
+        "name": "~templateDefinitions_reorder_name~",
+        "transport": [
+            {
+                "type": "~templateDefinitions_reorder_transport_type~",
+                "name": "~templateDefinitions_reorder_transport_name~",
+                "grouped": "~templateDefinitions_reorder_transport_grouped~"
+            }
+        ],
+        "bod": [
+            {
+                "name": "~templateDefinitions_reorder_bod_name~"
+            }
+        ],
+        "formatter": "~templateDefinitions_reorder_formatter~",
+        "subject": {
+            "type": "~templateDefinitions_reorder_subject_type~",
+            "value": "~templateDefinitions_reorder_subject_value~"
+        },
+        "content": {
+            "type": "~templateDefinitions_reorder_content_type~",
+            "value": "~templateDefinitions_reorder_content_value~",
+            "attachments": [
+                {
+                    "fileName": "~templateDefinitions_reorder_content_attachments_fileName~",
+                    "filePath": "~templateDefinitions_reorder_content_attachments_filePath~",
+                    "cid": "~templateDefinitions_reorder_content_attachments_cid~"
+                }
+            ]
+        },
+        "active": "~templateDefinitions_reorder_active~"
+    },
+    {
+        "company": "~templateDefinitions_future_order_company~",
+        "name": "~templateDefinitions_future_order_name~",
+        "transport": [
+            {
+                "type": "~templateDefinitions_future_order_transport_type~",
+                "name": "~templateDefinitions_future_order_transport_name~",
+                "grouped": "~templateDefinitions_future_order_transport_grouped~"
+            }
+        ],
+        "bod": [],
+        "formatter": "~templateDefinitions_future_order_formatter~",
+        "subject": {
+            "type": "~templateDefinitions_future_order_subject_type~",
+            "value": "~templateDefinitions_future_order_subject_value~"
+        },
+        "content": {
+            "type": "~templateDefinitions_future_order_content_type~",
+            "value": "~templateDefinitions_future_order_content_value~",
+            "attachments": [
+                {
+                    "fileName": "~templateDefinitions_future_order_content_attachments_fileName~",
+                    "filePath": "~templateDefinitions_future_order_content_attachments_filePath~",
+                    "cid": "~templateDefinitions_future_order_content_attachments_cid~"
+                }
+            ]
+        },
+        "active": "~templateDefinitions_future_order_active~"
+    }
+]

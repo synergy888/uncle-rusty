@@ -1,0 +1,116 @@
+[
+	{
+        "userName": "newcoadmin",
+        "hash" : "1xdlU4myHiMtqtcTwbX+38FNkUJAV/XtdUvYjtf6LtoR6igi61oysVXTPihN6Ad6BV7fOrtGukrahmoP8NWseoH/vORYfzDD2uNzahoGDW5HOIasK7KG3Ch2uAa4AEJkqMgKFlXDeJzWj99CPmu9Uc7MRdYfGcJYcb6l8WxvPQE=",
+        "firstName": "",
+        "lastName": "",
+        "email": "",
+        "passwordLifetime": "0",
+        "resetPassword": "false",
+        "loginAttempts": "0",
+        "lastLogin": "null",
+		"lastLogout": "null",
+		"totalLogins": "0",
+        "status": "Active",
+        "company": "",
+		"type": "Context",
+        "products": [
+            {
+                "code": "MobileEcommerce",
+                "roles": [
+                    "appadmin",
+                    "appuser"
+                ],
+                "settings": {
+                    "sms": "",
+                    "customer": {
+                        "code": "newco",
+                        "name": ""
+                    },
+                    "sales": [""],
+                    "timeZone" : {
+                        "value" : "-0500",
+                        "operator" : "-",
+                        "hours" : "05",
+                        "minutes" : "00"
+                    },
+                    "permissions" : {
+                        "batchWeights": "false",
+                        "truckTimes": "true",
+                        "pricing": "false",
+                        "mapping": "true",
+                        "acctInfo": "false",
+                        "docImage": "false",
+                        "futureOrderEmail": "true",
+                        "changeCustomer": "false",
+                        "isAdmin": "false",
+						"timeZone" : "true",
+						"advancedOrderRequest" : "true",
+						"reports" : "true"
+                    }
+                }
+            },
+			{
+                "code": "Mobileticket",
+                "roles": "appadmin",
+                "settings" : {
+                    "permissions":{
+                        "isAdmin" : "true",
+						"legalAdmin": "true"
+                    }
+                }
+            },
+            {
+                "code": "MobileticketBulk",
+                "roles": "appadmin",
+                "settings" : {
+                    "permissions":{
+                        "isAdmin" : "true",
+                        "legalAdmin": "true"
+                    }
+                }
+            },
+            {
+                "code": "jobsite",
+                "roles": [
+                    "appadmin",
+                    "appuser",
+					"ionicadmin"
+                ],
+                "settings": {
+                    "sms": "",
+                    "customer": {
+                        "code": "newco",
+                        "name": ""
+                    },
+                    "sales": [""],
+                    "timeZone" : {
+                        "value" : "-0500",
+                        "operator" : "-",
+                        "hours" : "05",
+                        "minutes" : "00"
+                    },
+                    "permissions" : {
+                        "batchWeights": "false",
+                        "truckTimes": "true",
+                        "pricing": "false",
+                        "mapping": "true",
+                        "acctInfo": "false",
+                        "docImage": "false",
+                        "futureOrderEmail": "true",
+                        "changeCustomer": "false",
+                        "isAdmin": "false",
+						"timeZone" : "true",
+						"advancedOrderRequest" : "true",
+						"reports" : "true"
+                    }
+                }
+            },
+			{
+				"code": "evoadmin",
+				"roles": ["companyadmin"],
+				"settings":{}
+			}
+        ]
+    }
+]

@@ -1,0 +1,284 @@
+[
+    {
+        "code": "~Companies_code~",
+        "environment" : "~Companies_products_commerce_settings_env~",
+        "description": "~Companies_description~",
+		"status" : "~Companies_status~",
+		"settings" : {
+			"communications" : {
+				"email" : {
+					"from" : {
+						"name" : "~Companies_settings_communications_email_from_name~",
+						"value" : "~Companies_settings_communications_email_from_value~"
+					}
+				}
+			},
+			"cloudStore" : "~Companies_settings_cloudStore~"
+		},
+		"customBranding" : {
+			"font_2" : "~Companies_customBranding_font_2~",
+			"font" : "~Companies_customBranding_font~"
+		},
+		"branding" : {
+			"primary" : "~Companies_branding_primary~",
+			"secondary" : "~Companies_branding_secondary~",
+			"text_primary" : "~Companies_branding_text_primary~",
+			"text_secondary" : "~Companies_branding_text_secondary~",
+			"logo" : "~Companies_branding_logo~"
+		},
+        "images": {
+			"smallLogo": "~Companies_images_smallLogo~"
+		},
+		"products": [
+            {
+                "code": "~Companies_products_commerce_code~",
+                "settings": {
+				  	"environment" : "~Companies_products_commerce_settings_env~",
+                    "systemType": "~Companies_products_commerce_settings_systemType~",
+                    "documentsConfig": {"~Companies_products_commerce_settings_documentsConfig~"
+                    },
+					"edxGatewayConfig" : {
+						"ServerAddress" : "~Companies_products_commerce_settings_edxGatewayConfig_ServerAddress~",
+						"Port" : "~Companies_products_commerce_settings_edxGatewayConfig_Port~"
+					},
+                    "dataEndPoints": {
+                        "LegacyDataService" : {
+                            "EndPointAddress" : "~Companies_products_commerce_settings_dataEndPoints_LegacyDataService_EndPointAddress~",
+                            "Port" : "~Companies_products_commerce_settings_dataEndPoints_LegacyDataService_Port~",
+                            "Type" : "~Companies_products_commerce_settings_dataEndPoints_LegacyDataService_Type~",
+                            "SubType" : "~Companies_products_commerce_settings_dataEndPoints_LegacyDataService_SubType~"
+                        },
+                        "SocketEndPoint" : {
+                            "EndPointAddress" : "~Companies_products_commerce_settings_dataEndPoints_SocketEndPoint_EndPointAddress~",
+                            "Port" : "~Companies_products_commerce_settings_dataEndPoints_SocketEndPoint_Port~",
+                            "Type" : "~Companies_products_commerce_settings_dataEndPoints_SocketEndPoint_Type~",
+                            "SubType" : "~Companies_products_commerce_settings_dataEndPoints_SocketEndPoint_SubType~"
+                        }
+                    },
+					"futureOrdersEmail" : {
+						"generateTime" : "~Companies_products_commerce_settings_futureOrdersEmail_generateTime~",
+						"durationTimePeriod" : "~Companies_products_commerce_settings_futureOrdersEmail_durationTimePeriod~",
+						"template" : "~Companies_products_commerce_settings_futureOrdersEmail_template~"
+					},
+					"notifications" : {
+						"orderRequest" : {
+							"template" : "~Companies_products_commerce_settings_notifications_orderRequest_template~",
+							"to" : {
+								"name" : "~Companies_products_commerce_settings_notifications_orderRequest_template_to_name~",
+								"value" : "~Companies_products_commerce_settings_notifications_orderRequest_template_to_value~"
+							}
+						},
+						"orderCreate" : {
+							"template" : "~Companies_products_commerce_settings_notifications_orderCreate_template~"
+						},
+						"ticketCreate" : {
+							"template" : "~Companies_products_commerce_settings_notifications_ticketCreate_template~"
+						}
+					},
+					"company" : {
+						"advancedOrderRequest" : "~Companies_products_commerce_settings_company_advancedOrderRequest~",
+						"acctInfo" : "~Companies_products_commerce_settings_company_acctInfo~",
+						"docImage" : "~Companies_products_commerce_settings_company_docImage~",
+						"timeZone" : {
+							"value" : "~Companies_products_commerce_settings_company_timeZone_value~",
+							"operator" : "~Companies_products_commerce_settings_company_timeZone_operator~",
+							"hours" : "~Companies_products_commerce_settings_company_timeZone_hours~",
+							"minutes" : "~Companies_products_commerce_settings_company_timeZone_minutes~",
+							"name" : "~Companies_products_commerce_settings_company_timeZone_name~",
+							"defaultRegion" : "~Companies_products_commerce_settings_company_timeZone_defaultRegion~"
+						}
+					},
+					"user" : {
+						"sms" : "~Companies_products_commerce_settings_user_sms~",
+						"customer" : {
+							"code" : "~Companies_products_commerce_settings_user_customer_code~",
+							"name" : "~Companies_products_commerce_settings_user_customer_name~"
+						},
+						"sales" : ["~Companies_products_commerce_settings_user_sales~"],
+						"timeZone" : {
+							"value" : "~Companies_products_commerce_settings_user_timeZone_value~",
+							"operator" : "~Companies_products_commerce_settings_user_timeZone_operator~",
+							"hours" : "~Companies_products_commerce_settings_user_timeZone_hours~",
+							"minutes" : "~Companies_products_commerce_settings_user_timeZone_minutes~"
+						},
+						"permissions" : {
+							"batchWeights" : "~Companies_products_commerce_settings_user_permissions_batchWeights~",
+							"truckTimes" : "~Companies_products_commerce_settings_user_permissions_truckTimes~",
+							"pricing" : "~Companies_products_commerce_settings_user_permissions_pricing~",
+							"mapping" : "~Companies_products_commerce_settings_user_permissions_mapping~",
+							"acctInfo" : "~Companies_products_commerce_settings_user_permissions_acctInfo~",
+							"docImage" : "~Companies_products_commerce_settings_user_permissions_docImage~",
+							"futureOrderEmail" : "~Companies_products_commerce_settings_user_permissions_futureOrderEmail~",
+							"changeCustomer" : "~Companies_products_commerce_settings_user_permissions_changeCustomer~",
+							"isAdmin" : "~Companies_products_commerce_settings_user_permissions_isAdmin~"
+						}
+					}
+                }
+            },
+			{
+                "code": "~Companies_products_ticket_code~",
+                "settings": {
+                    "savePdf" : "~Companies_products_ticket_settings_savePdf~",
+                    "systemType" : {
+                        "hauler" : "~Companies_products_ticket_settings_systemType_hauler~",
+                        "ticket" : {
+                            "concrete" : "~Companies_products_ticket_settings_systemType_ticket_concrete~",
+                            "aggregate" : "~Companies_products_ticket_settings_systemType_ticket_aggregate~"
+                        }
+                    },
+                    "dataEndPoints": {
+						"MobileTicketService" : {
+							"EndPointAddress" : "~Companies_products_ticket_settings_dataEndPoints_MobileTicketService_EndPointAddress~",
+							"Port" : "~Companies_products_ticket_settings_dataEndPoints_MobileTicketService_Port~",
+							"Type" : "~Companies_products_ticket_settings_dataEndPoints_MobileTicketService_Type~",
+							"SubType" : "~Companies_products_ticket_settings_dataEndPoints_MobileTicketService_SubType~",
+                            "context" : "~Companies_products_ticket_settings_dataEndPoints_MobileTicketService_context~"
+						},
+                        "EDXTicketService" : {
+							"EndPointAddress" : "~Companies_products_ticket_settings_dataEndPoints_EDXTicketService_EndPointAddress~",
+							"Port" : "~Companies_products_ticket_settings_dataEndPoints_EDXTicketService_Port~",
+							"Type" : "~Companies_products_ticket_settings_dataEndPoints_EDXTicketService_Type~",
+							"SubType" : "~Companies_products_ticket_settings_dataEndPoints_EDXTicketService_SubType~",
+                            "context" : "~Companies_products_ticket_settings_dataEndPoints_EDXTicketService_context~"
+						}
+                    },
+					"company": {
+						"timeZone": {
+							"value": "~Companies_products_ticket_settings_company_timeZone_value~",
+							"operator": "~Companies_products_ticket_settings_company_timeZone_operator~",
+							"hours": "~Companies_products_ticket_settings_company_timeZone_hours~",
+							"minutes": "~Companies_products_ticket_settings_company_timeZone_minutes~"
+						},
+                        "supportEmail" : "~Companies_products_ticket_settings_company_supportEmail~"
+					},
+					"templates" : [ 
+                        {
+                            "type" : "~Companies_products_ticket_settings_templates_type~",
+                            "name" : "~Companies_products_ticket_settings_templates_name~",
+                            "body" : "~Companies_products_ticket_settings_templates_body~",
+                            "subject" : "~Companies_products_ticket_settings_templates_subject~",
+                            "fileName" : "~Companies_products_ticket_settings_templates_fileName~",
+                            "formatter" : "~Companies_products_ticket_settings_templates_formatter~"
+                        }, 
+                        {
+                            "type" : "~Companies_products_ticket_settings_templates_type2~",
+                            "name" : "~Companies_products_ticket_settings_templates_name2~",
+                            "body" : "~Companies_products_ticket_settings_templates_body2~",
+                            "subject" : "~Companies_products_ticket_settings_templates_subject2~",
+                            "fileName" : "~Companies_products_ticket_settings_templates_fileName2~",
+                            "formatter" : "~Companies_products_ticket_settings_templates_formatter2~"
+                        }
+                    ]
+                }
+            },
+            {
+                "code": "~Companies_products_jobsite_code~",
+                "settings": {
+                    "systemType": "~Companies_products_jobsite_settings_systemType~",
+                    "documentsConfig": {"~Companies_products_jobsite_settings_documentsConfig~"
+                    },
+					"edxGatewayConfig" : {
+						"ServerAddress" : "~Companies_products_jobsite_settings_edxGatewayConfig_ServerAddress~",
+						"Port" : "~Companies_products_jobsite_settings_edxGatewayConfig_Port~"
+					},
+                    "dataEndPoints": {
+                        "DataService" : {
+                            "EndPointAddress" : "~Companies_products_jobsite_settings_dataEndPoints_DataService_EndPointAddress~",
+                            "Port" : "~Companies_products_jobsite_settings_dataEndPoints_DataService_Port~",
+                            "Type" : "~Companies_products_jobsite_settings_dataEndPoints_DataService_Type~",
+                            "SubType" : "~Companies_products_jobsite_settings_dataEndPoints_DataService_SubType~"
+                        },
+                        "SocketEndPoint": {
+                            "EndPointAddress": "~Companies_products_jobsite_settings_dataEndPoints_SocketEndPoint_EndPointAddress~",
+                            "Port": "~Companies_products_jobsite_settings_dataEndPoints_SocketEndPoint_Port~",
+                            "Type": "~Companies_products_jobsite_settings_dataEndPoints_SocketEndPoint_Type~",
+                            "SubType": "~Companies_products_jobsite_settings_dataEndPoints_SocketEndPoint_SubType~"
+                        }
+                    },
+                    "futureOrdersEmail": {
+                        "generateTime": "~Companies_products_jobsite_settings_futureOrdersEmail_generateTime~",
+                        "durationTimePeriod": "~Companies_products_jobsite_settings_futureOrdersEmail_durationTimePeriod~",
+                        "template": "~Companies_products_jobsite_settings_futureOrdersEmail_template~"
+                    },
+                    "notifications": {
+                        "orderRequest": {
+                            "template": "~Companies_products_jobsite_settings_notifications_orderRequest_template~",
+                            "to": {
+                                "name": "~Companies_products_jobsite_settings_notifications_orderRequest_template_to_name~",
+                                "value": "~Companies_products_jobsite_settings_notifications_orderRequest_template_to_value~"
+                            }
+                        },
+                        "orderCreate": {
+                            "template": "~Companies_products_jobsite_settings_notifications_orderCreate_template~"
+                        },
+                        "ticketCreate": {
+                            "template": "~Companies_products_jobsite_settings_notifications_ticketCreate_template~"
+                        }
+                    },
+                    "company": {
+                        "timeZone": {
+                            "value": "~Companies_products_jobsite_settings_company_timeZone_value~",
+                            "operator": "~Companies_products_jobsite_settings_company_timeZone_operator~",
+                            "hours": "~Companies_products_jobsite_settings_company_timeZone_hours~",
+                            "minutes": "~Companies_products_jobsite_settings_company_timeZone_minutes~",
+							"name" : "~Companies_products_jobsite_settings_company_timeZone_name~",
+							"defaultRegion" : "~Companies_products_jobsite_settings_company_timeZone_defaultRegion~"
+                        }
+                    },
+                    "user": {
+                        "customer": {
+                            "code": "~Companies_products_jobsite_settings_user_customer_code~",
+                            "name": "~Companies_products_jobsite_settings_user_customer_name~"
+                        },
+                        "timeZone" : {
+                            "value" : "~Companies_products_jobsite_settings_user_timeZone_value~",
+                            "operator" : "~Companies_products_jobsite_settings_user_timeZone_operator~",
+                            "hours" : "~Companies_products_jobsite_settings_user_timeZone_hours~",
+                            "minutes" : "~Companies_products_jobsite_settings_user_timeZone_minutes~"
+                        },
+                        "permissions" : {
+                            "batchWeights": "~Companies_products_jobsite_settings_user_permissions_batchWeights~",
+                            "truckTimes": "~Companies_products_jobsite_settings_user_permissions_truckTimes~",
+                            "pricing": "~Companies_products_jobsite_settings_user_permissions_pricing~",
+                            "mapping": "~Companies_products_jobsite_settings_user_permissions_mapping~",
+                            "futureOrderEmail": "~Companies_products_jobsite_settings_user_permissions_futureOrderEmail~",
+                            "changeCustomer": "~Companies_products_jobsite_settings_user_permissions_changeCustomer~",
+							"timeZone" : "~Companies_products_jobsite_settings_user_permissions_timeZone~"
+                        }
+                    }
+                }
+            },
+			{
+				"code" : "~Companies_products_supply_code~",
+				"settings" : {
+					"user" : {
+						"vendor" : "~Companies_products_supply_settings_user_vendor~",
+						"permissions" : {
+							"configure" : "~Companies_products_supply_settings_user_permissions_configure~",
+							"plan" : "~Companies_products_supply_settings_user_permissions_plan~",
+							"alias" : "~Companies_products_supply_settings_user_permissions_alias~"
+						},
+						"locations" : ["~Companies_products_supply_settings_user_locations~"]
+					},
+					"dataEndPoints" : {
+						"MasterData" : {
+							"EndPointAddress" : "~Companies_products_supply_settings_dataEndPoints_MasterData_EndPointAddress~",
+							"Port" : "~Companies_products_supply_settings_dataEndPoints_MasterData_Port~",
+							"Type" : "~Companies_products_supply_settings_dataEndPoints_MasterData_Type~",
+							"SubType" : "~Companies_products_supply_settings_dataEndPoints_MasterData_SubType~"
+						},
+						"SocketEndPoint" : {
+							"EndPointAddress" : "~Companies_products_supply_settings_dataEndPoints_SocketEndPoint_EndPointAddress~",
+							"Port" : "~Companies_products_supply_settings_dataEndPoints_SocketEndPoint_Port~",
+							"Type" : "~Companies_products_supply_settings_dataEndPoints_SocketEndPoint_Type~",
+							"SubType" : "~Companies_products_supply_settings_dataEndPoints_SocketEndPoint_SubType~"
+						}
+					}
+				}
+			},
+			{ 	"code": "~Companies_products_evoadmin_code~",
+				"settings": {"~Companies_products_evoadmin_settings~"}
+			}
+        ]
+    }
+]

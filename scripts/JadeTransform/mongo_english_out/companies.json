@@ -1,0 +1,334 @@
+[
+  {
+    "code": "newco",
+    "environment" : "alpha",
+    "description": "",
+    "status" : "y",
+    "settings" : {
+      "communications" : {
+        "email" : {
+          "from" : {
+            "name" : "Newco Corp",
+            "value" : "info@newco.com"
+          }
+        }
+      },
+      "cloudStore" : "n"
+    },
+    "products": [
+      {
+        "code": "MobileEcommerce",
+        "settings": {
+          "environment" : "alpha",
+          "documentsConfig": {
+            "providerAddress" : "http://localhost",
+            "documentsUseChecksum" : "false",
+            "documents" : {
+              "ticketUrl" : "KT103_0_0_0={ticketCode}&KT102_0_0_0={customerCode}&clienttype=html&cqid=106&filetype=PDF",
+              "invoiceUrl" : "KT106_0_0_0={invoiceNumber}&KT102_0_0_0={customerCode}&clienttype=html&cqid=105&filetype=PDF",
+              "invoiceByDateUrl" : "KT102_0_0_0={customerCode}&ToDate={toDate}&FromDate={fromDate}&clienttype=html&cqid=105&filetype=PDF",
+              "invoiceByProjectByDateUrl" : "KT102_0_0_0={customerCode}&KT107_0_0_0={projectCode}&ToDate={toDate}&FromDate={fromDate}&clienttype=html&cqid=105&filetype=PDF",
+              "checkUrl" : "KT102_0_0_0={customerCode}&KT117_0_0_0={checkNumber}&doctypeid=109&clienttype=html&filetype=PDF",
+              "statementsUrl" : "KT102_0_0_0={customerCode}&ToDate={toDate}&FromDate={fromDate}&clienttype=html&cqid=104&filetype=PDF",
+              "eTicketUrl" : "KT103_0_0_0={ticketCode}&KT102_0_0_0={customerCode}&doctypeid=101&clienttype=html&filetype=PDF",
+              "batchWeightsUrl" : "KT103_0_0_0={ticketCode}&KT102_0_0_0={customerCode}&doctypeid=116&clienttype=html&filetype=PDF"
+            }
+          },
+          "edxGatewayConfig" : {
+            "ServerAddress" : "http://localhost",
+            "Port" : "35244"
+          },
+          "dataEndPoints": {
+            "LegacyDataService" : {
+              "EndPointAddress" : "http://localhost",
+              "Port" : "35244",
+              "Type" : "REST",
+              "SubType" : "Client"
+            },
+            "SocketEndPoint" : {
+              "EndPointAddress" : "http://localhost",
+              "Port" : "35244",
+              "Type" : "REST",
+              "SubType" : "Client"
+            }
+          },
+          "futureOrdersEmail" : {
+            "generateTime" : "1127",
+            "durationTimePeriod" : "3",
+            "template" : "Future Order"
+          },
+          "notifications" : {
+            "orderRequest" : {
+              "template" : "Order Request",
+              "to" : {
+                "name" : "",
+                "value" : ""
+              }
+            },
+            "orderCreate" : {
+              "template" : "Order Create"
+            },
+            "ticketCreate" : {
+              "template" : "Ticket Create"
+            }
+          },
+          "company" : {
+            "acctInfo" : "true",
+            "docImage" : "true",
+            "timeZone" : {
+              "value" : "0600",
+              "operator" : "-",
+              "hours" : "06",
+              "minutes" : "00",
+              "name" : "US/Central",
+              "defaultRegion" : "USA"
+            }
+          },
+          "user" : {
+          "sms": "",
+          "customer": {
+              "code": "newco",
+              "name": ""
+          },
+          "sales": [""],
+          "timeZone" : {
+              "name" : "US/Central",
+              "defaultRegion" : "USA"
+          },
+            "permissions" : {
+              "batchWeights" : "false",
+              "truckTimes" : "true",
+              "pricing" : "false",
+              "mapping" : "true",
+              "acctInfo" : "false",
+              "docImage" : "false",
+              "futureOrderEmail" : "true",
+              "changeCustomer" : "false",
+              "isAdmin" : "false"
+            }
+          }
+        }
+      },
+      {
+        "code": "Mobileticket",
+        "settings": {
+          "savePdf" : "false",
+          "systemType" : {
+            "hauler" : "false",
+            "ticket" : {
+              "concrete" : "false",
+              "aggregate" : "false"
+            }
+          },
+          "dataEndPoints": {
+            "MobileTicketService" : {
+              "EndPointAddress" : "http://localhost",
+              "Port" : "35245",
+              "Type" : "REST",
+              "SubType" : "Client",
+              "context" : "both"
+            },
+            "EDXTicketService" : {
+              "EndPointAddress" : "http://localhost",
+              "Port" : "35245",
+              "Type" : "REST",
+              "SubType" : "Client",
+              "context" : "none"
+            }
+          },
+          "company": {
+            "timeZone": {
+              "value": "0600",
+              "operator": "-",
+              "hours": "06",
+              "minutes": "00"
+            },
+            "supportEmail" : ""
+          },
+          "templates" : [
+            {
+              "type" : "concrete",
+              "name" : "TicketJade-Concrete",
+              "body" : "|testbcs2 attached concrete ticket",
+              "subject" : "|{{ soldToCustomer.code }} - {{ soldToCustomer.name }} - {{ ticketNumber }}",
+              "fileName" : "{{ soldToCustomer.code }}_{{ project.code }}_{{ ticketNumber }}",
+              "formatter" : "jade"
+            },
+            {
+              "type" : "aggregate",
+              "name" : "TicketJade-Aggregate",
+              "body" : "|testbcs2 attached aggregate ticket",
+              "subject" : "|{{ soldToCustomer.code }} - {{ soldToCustomer.name }} - {{ ticketNumber }}",
+              "fileName" : "{{ location.plantCode }}_{{ company.code }}_{{ soldToCustomer.code }}_{{ ticketNumber }}",
+              "formatter" : "jade"
+            }
+          ]
+        }
+      },
+      {
+        "code": "MobileticketBulk",
+        "settings": {
+          "savePdf" : "false",
+          "systemType" : {
+            "hauler" : "false",
+            "ticket" : {
+              "concrete" : "false",
+              "aggregate" : "false"
+            }
+          },
+          "dataEndPoints": {
+            "MobileBulkTicketService" : {
+              "EndPointAddress" : "http://localhost",
+              "Port" : "35245",
+              "Type" : "REST",
+              "SubType" : "Client",
+              "context" : "both"
+            },
+            "EDXTicketService" : {
+              "EndPointAddress" : "http://localhost",
+              "Port" : "35245",
+              "Type" : "REST",
+              "SubType" : "Client",
+              "context" : "none"
+            }
+          },
+          "company": {
+            "timeZone": {
+              "value": "0600",
+              "operator": "-",
+              "hours": "06",
+              "minutes": "00"
+            },
+            "supportEmail" : ""
+          },
+          "templates" : [
+            {
+              "type" : "concrete",
+              "name" : "TicketJade-Concrete",
+              "body" : "|testbcs2 attached concrete ticket",
+              "subject" : "|{{ soldToCustomer.code }} - {{ soldToCustomer.name }} - {{ ticketNumber }}",
+              "fileName" : "{{ soldToCustomer.code }}_{{ project.code }}_{{ ticketNumber }}",
+              "formatter" : "jade"
+            },
+            {
+              "type" : "aggregate",
+              "name" : "TicketJade-Aggregate",
+              "body" : "|testbcs2 attached aggregate ticket",
+              "subject" : "|{{ soldToCustomer.code }} - {{ soldToCustomer.name }} - {{ ticketNumber }}",
+              "fileName" : "{{ location.plantCode }}_{{ company.code }}_{{ soldToCustomer.code }}_{{ ticketNumber }}",
+              "formatter" : "jade"
+            }
+          ]
+        }
+      },
+      {
+        "code": "jobsite",
+        "settings": {
+          "systemType": "cs",
+          "documentsConfig": {
+          },
+          "edxGatewayConfig" : {
+            "ServerAddress" : "http://localhost",
+            "Port" : "35245"
+          },
+          "dataEndPoints": {
+            "DataService" : {
+              "EndPointAddress" : "http://localhost",
+              "Port" : "35245",
+              "Type" : "REST",
+              "SubType" : "Client"
+            },
+            "SocketEndPoint": {
+              "EndPointAddress": "http://localhost",
+              "Port": "35245",
+              "Type": "REST",
+              "SubType": "Client"
+            }
+          },
+          "futureOrdersEmail": {
+            "generateTime": "1400",
+            "durationTimePeriod": "3",
+            "template": "Future Order"
+          },
+          "notifications": {
+            "orderRequest": {
+              "template": "Order Request",
+              "to": {
+                "name": "",
+                "value": ""
+              }
+            },
+            "orderCreate": {
+              "template": "Order Create"
+            },
+            "ticketCreate": {
+              "template": "Ticket Create"
+            }
+          },
+          "company": {
+            "timeZone": {
+              "value": "0600",
+              "operator": "-",
+              "hours": "06",
+              "minutes": "00",
+              "name" : "US/Central",
+              "defaultRegion" : "USA"
+            }
+          },
+          "user": {
+            "sms": "",
+            "customer": {
+              "code": "newco",
+              "name": ""
+            },
+            "sales": [""],
+            "timeZone" : {
+              "name" : "US/Central",
+              "defaultRegion" : "USA"
+            },
+            "permissions" : {
+              "batchWeights": "false",
+              "truckTimes": "true",
+              "pricing": "false",
+              "mapping": "true",
+              "futureOrderEmail": "undefined",
+              "changeCustomer": "false",
+              "timeZone" : "false"
+            }
+          }
+        }
+      },
+      {
+        "code" : "supply",
+        "settings" : {
+          "user" : {
+            "vendor" : "",
+            "permissions" : {
+              "configure" : "false",
+              "plan" : "false",
+              "alias" : "false"
+            },
+            "locations" : [""]
+          },
+          "dataEndPoints" : {
+            "MasterData" : {
+              "EndPointAddress" : "http://localhost",
+              "Port" : "35245",
+              "Type" : "REST",
+              "SubType" : "Client"
+            },
+            "SocketEndPoint" : {
+              "EndPointAddress" : "127.0.0.1",
+              "Port" : "35245",
+              "Type" : "REST",
+              "SubType" : "Server"
+            }
+          }
+        }
+      },
+      { 	"code": "evoadmin",
+        "settings": {}
+      }
+    ]
+  }
+]

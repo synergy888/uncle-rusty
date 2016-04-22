@@ -1,0 +1,84 @@
+[
+	{
+        "company": "~notificationDefinitions_order_create_company~",
+	    "name": "~notificationDefinitions_order_create_name~",
+		"bod": {
+		    "name": "~notificationDefinitions_order_create_bod_name~",
+		    "filterDefinitions": [
+	        	{
+	            	"name": "~notificationDefinitions_order_create_bod_filterDefinitions_name~",
+	                "type": "~notificationDefinitions_order_create_bod_filterDefinitions_type~",
+	                "expression": "~notificationDefinitions_order_create_bod_filterDefinitions_expression~"
+				},
+	        	{
+	            	"name": "~notificationDefinitions_order_create_bod_filterDefinitions_name2~",
+	                "type": "~notificationDefinitions_order_create_bod_filterDefinitions_type2~",
+	                "expression": "~notificationDefinitions_order_create_bod_filterDefinitions_expression2~"
+				}
+	        ],		
+		    "contextDefinitions": ["~notificationDefinitions_order_create_bod_contextDefinitions~"]
+	    },					
+	    "context": [
+        	"~notificationDefinitions_order_create_context~",
+            "~notificationDefinitions_order_create_context2~",
+            "~notificationDefinitions_order_create_context3~"
+		],			
+		"transports": [
+        	{
+				"type": "~notificationDefinitions_order_create_transports_type~",
+			    "name": "~notificationDefinitions_order_create_transports_name~",
+	            "grouped": "~notificationDefinitions_order_create_transports_grouped~",
+	            "template": {
+	            	"name": "~notificationDefinitions_order_create_transports_template_name~"
+	            }
+			},
+        	{
+				"type": "~notificationDefinitions_order_create_transports_type2~",
+			    "name": "~notificationDefinitions_order_create_transports_name2~",
+	            "grouped": "~notificationDefinitions_order_create_transports_grouped2~",
+	            "template": {
+	            	"name": "~notificationDefinitions_order_create_transports_template_name2~"
+	            }
+			}
+	    ]
+	},
+    
+	{
+        "company": "~notificationDefinitions_ticket_create_company~",
+	    "name": "~notificationDefinitions_ticket_create_name~",
+		"bod": {
+		    "name": "~notificationDefinitions_ticket_create_bod_name~",
+		    "filterDefinitions": [
+	        	{
+	            	"name": "~notificationDefinitions_ticket_create_bod_filterDefinitions_name~",
+	                "type": "~notificationDefinitions_ticket_create_bod_filterDefinitions_type~",
+	                "expression": "~notificationDefinitions_ticket_create_bod_filterDefinitions_expression~"
+				}
+	        ],		
+		    "contextDefinitions": ["~notificationDefinitions_ticket_create_bod_contextDefinitions~"]
+	    },					
+	    "context": [
+        	"~notificationDefinitions_ticket_create_context~",
+            "~notificationDefinitions_ticket_create_context2~",
+            "~notificationDefinitions_ticket_create_context3~"
+		],			
+		"transports": [
+        	{
+				"type": "~notificationDefinitions_ticket_create_transports_type~",
+			    "name": "~notificationDefinitions_ticket_create_transports_name~",
+	            "grouped": "~notificationDefinitions_ticket_create_transports_grouped~",
+	            "template": {
+	            	"name": "~notificationDefinitions_ticket_create_transports_template_name~"
+	            }
+			},            
+        	{
+				"type": "~notificationDefinitions_ticket_create_transports_type2~",
+			    "name": "~notificationDefinitions_ticket_create_transports_name2~",
+	            "grouped": "~notificationDefinitions_ticket_create_transports_grouped2~",
+	            "template": {
+	            	"name": "~notificationDefinitions_ticket_create_transports_template_name2~"
+	            }
+			}
+	    ]
+	}
+]

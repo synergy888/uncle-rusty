@@ -1,0 +1,84 @@
+[
+	{
+        "company": "concrite",
+	    "name": "Order Create",
+		"bod": {
+		    "name": "Order",
+		    "filterDefinitions": [
+	        	{
+	            	"name": "Customer",
+	                "type": "JPATH",
+	                "expression": "customer.code"
+				},
+	        	{
+	            	"name": "Project",
+	                "type": "JPATH",
+	                "expression": "customer.order.projectCode"
+				}
+	        ],		
+		    "contextDefinitions": [""]
+	    },					
+	    "context": [
+        	"Customer",
+            "Project",
+            "Order"
+		],			
+		"transports": [
+        	{
+				"type": "email",
+			    "name": "Email",
+	            "grouped": "true",
+	            "template": {
+	            	"name": "Order"
+	            }
+			},
+        	{
+				"type": "sms",
+			    "name": "SMS",
+	            "grouped": "false",
+	            "template": {
+	            	"name": "Order SMS"
+	            }
+			}
+	    ]
+	},
+    
+	{
+        "company": "concrite",
+	    "name": "Ticket Create",
+		"bod": {
+		    "name": "Ticket",
+		    "filterDefinitions": [
+	        	{
+	            	"name": "Order ID",
+	                "type": "JPATH",
+	                "expression": "customer.order._id"
+				}
+	        ],		
+		    "contextDefinitions": [""]
+	    },					
+	    "context": [
+        	"Customer",
+            "Project",
+            "Order"
+		],			
+		"transports": [
+        	{
+				"type": "email",
+			    "name": "Email",
+	            "grouped": "true",
+	            "template": {
+	            	"name": "Ticket"
+	            }
+			},            
+        	{
+				"type": "sms",
+			    "name": "SMS",
+	            "grouped": "false",
+	            "template": {
+	            	"name": "Ticket SMS"
+	            }
+			}
+	    ]
+	}
+]

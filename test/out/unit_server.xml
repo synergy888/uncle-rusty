@@ -1,0 +1,61 @@
+<testsuite name="Mocha Tests" tests="59" failures="0" errors="0" skipped="0" timestamp="Wed, 20 Apr 2016 09:55:05 GMT" time="0.16">
+<testcase classname="initial-prompts-and-mongo-settings-tests populateTransformObjects - New customer unit test" name="should return mongoHost value that matches transformProperty (127.0.0.1)" time="0.002"/>
+<testcase classname="initial-prompts-and-mongo-settings-tests populateTransformObjects - New customer unit test" name="should return mongoPort value that matches transformProperty" time="0.001"/>
+<testcase classname="initial-prompts-and-mongo-settings-tests populateTransformObjects - New customer unit test" name="should return company_code value that matches transformProperty" time="0"/>
+<testcase classname="initial-prompts-and-mongo-settings-tests populateTransformObjects - New customer unit test" name="should match new/existing prompt text (Is this a new customer?)" time="0"/>
+<testcase classname="initial-prompts-and-mongo-settings-tests populateTransformObjects - New customer unit test" name="should return y for a new customer" time="0"/>
+<testcase classname="initial-prompts-and-mongo-settings-tests populateTransformObjects - New customer unit test" name="should return y for a new customer provided first chracter is y (e.g. yep)" time="0"/>
+<testcase classname="initial-prompts-and-mongo-settings-tests populateTransformObjects - New customer unit test" name="should return y for a new customer provided first chracter is y (e.g. yes)" time="0"/>
+<testcase classname="Test Prompts Mobile Ticket Bulk tests for new customer EDX gateway" name="should match edx gateway ip prompt text (What is the EDX Gateway IP?)" time="0"/>
+<testcase classname="Test Prompts Mobile Ticket Bulk tests for new customer EDX gateway" name="should return 'http://localhost' for edx gateway ip" time="0"/>
+<testcase classname="Test Prompts Mobile Ticket Bulk tests for new customer EDX gateway" name="should match edx gateway port prompt text (What is the EDX Gateway Port?)" time="0"/>
+<testcase classname="Test Prompts Mobile Ticket Bulk tests for new customer EDX gateway" name="should return '35245' for edx gateway port" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer System type" name="should match system type prompt text (Is this setup for a command series?)" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer System type" name="should return integra for system type" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer Future order email" name="should match future order email generate time prompt text (What is future orders email generate time?)" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer Future order email" name="should return '1127' for future order email generate time" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer Future order email" name="should match future order email duration time prompt text (What is future orders email duration time period?)" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer Future order email" name="should return '3' for future order email duration time" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer End point" name="should match end pint prompt text (What is their End Point (What server is the IIS (CS) or Integra Rest service located)?)" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer End point" name="should return 'http://localhost' for end point" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer End point" name="should match end point port prompt text (What is their End Point Port ?)" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer End point" name="should return '35244' for end point port" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer Advance order request" name="should match advance order request prompt text (Is the (customer) doing Advance Order Request?)" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer Advance order request" name="should return false for advance order request" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer Advance order request" name="should match edx gateway ip prompt text (What is the EDX Gateway IP?)" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer Advance order request" name="should return 'http://localhost' for edx gateway ip" time="0.001"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer Advance order request" name="should match edx gateway port prompt text (What is the EDX Gateway Port?)" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer Advance order request" name="should return '35244' for edx gateway port" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer Reorder request" name="should match reorder request mail prompt text (What is their Reorder request email?)" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer On base" name="should match on base prompt text (Do they have onBase?)" time="0"/>
+<testcase classname="Test Prompts Mobile Commerce tests for new customer Provider url" name="should match provider url prompt text (What is the provider URL?)" time="0"/>
+<testcase classname="Test Prompts Mobile Ticket Bulk tests for new customer EDX gateway" name="should match edx gateway ip prompt text (What is the EDX Gateway IP?)" time="0"/>
+<testcase classname="Test Prompts Mobile Ticket Bulk tests for new customer EDX gateway" name="should return 'http://localhost' for edx gateway ip" time="0"/>
+<testcase classname="Test Prompts Mobile Ticket Bulk tests for new customer EDX gateway" name="should match edx gateway port prompt text (What is the EDX Gateway Port?)" time="0"/>
+<testcase classname="Test Prompts Mobile Ticket Bulk tests for new customer EDX gateway" name="should return '35245' for edx gateway port" time="0"/>
+<testcase classname="Test Prompts Mobile Ticket tests for new customer EDX gateway" name="should match edx gateway ip prompt text (What is the EDX Gateway IP?)" time="0"/>
+<testcase classname="Test Prompts Mobile Ticket tests for new customer EDX gateway" name="should return 'http://localhost' for edx gateway ip" time="0"/>
+<testcase classname="Test Prompts Mobile Ticket tests for new customer EDX gateway" name="should match edx gateway port prompt text (What is the EDX Gateway Port?)" time="0"/>
+<testcase classname="Test Prompts Mobile Ticket tests for new customer EDX gateway" name="should return '35245' for edx gateway port" time="0"/>
+<testcase classname="mongo-transform populateTransformObjects - New customer unit test" name="should return output_to_folder_only value that matches transformProperty" time="0.001"/>
+<testcase classname="mongo-transform populateTransformObjects - New customer unit test" name="should return input_folder value that matches transformProperty" time="0"/>
+<testcase classname="mongo-transform populateTransformObjects - New customer unit test" name="should return output_folder value that matches transformProperty" time="0"/>
+<testcase classname="Test mongo transformation Mongo transformation test input folder" name="should return output_to_folder_only value that matches transformProperty" time="0"/>
+<testcase classname="Test mongo transformation Mongo transformation test input folder" name="should return input_folder value that matches transformProperty" time="0"/>
+<testcase classname="Test mongo transformation Mongo transformation test input folder" name="should return output_folder value that matches transformProperty" time="0.001"/>
+<testcase classname="Test mongo transformation Mongo transformation test input folder" name="should match input folder prompt text (Enter a relative path to the Mongo JSON input folder containing the .json files to be modified.)" time="0"/>
+<testcase classname="Test mongo transformation Mongo transformation test input folder" name="should be valid and non empty directory" time="0.012"/>
+<testcase classname="Test mongo transformation Mongo transformation test output folder" name="should match output folder prompt text (Enter a relative path to the Mongo JSON output folder where the transformed .json files will be written to.)" time="0"/>
+<testcase classname="Test Prompts Non product info test for new customer Company descripion" name="should match company description prompt text (What is the company description?)" time="0"/>
+<testcase classname="Test Prompts Non product info test for new customer Company descripion" name="should return 'new company' for new customer" time="0"/>
+<testcase classname="Test Prompts Non product info test for new customer Company status" name="should match company status prompt text (Is the company status active?)" time="0"/>
+<testcase classname="Test Prompts Non product info test for new customer Company status" name="should return y for company status active" time="0"/>
+<testcase classname="Test Prompts Non product info test for new customer Company email" name="should match company email name prompt text (What is the company email name?)" time="0"/>
+<testcase classname="Test Prompts Non product info test for new customer Company email" name="should return Newco Corp for company email name" time="0"/>
+<testcase classname="Test Prompts Non product info test for new customer Company email" name="should match company email id prompt text (What is the company email Id?)" time="0"/>
+<testcase classname="Test Prompts Non product info test for new customer Company email" name="should return info@newco.com for company email id" time="0"/>
+<testcase classname="Test Prompts Non product info test for new customer Company cloud storage" name="should match company cloud storage prompt text (Company has cloud store?)" time="0"/>
+<testcase classname="Test Prompts Non product info test for new customer Company cloud storage" name="should return n for company has cloud storage" time="0"/>
+<testcase classname="Test Prompts Non product info test for new customer Environment" name="should match environment prompt text (Enter y if the environment is alpha and n if production?)" time="0"/>
+<testcase classname="Test Prompts Non product info test for new customer Environment" name="should return alpha for environment" time="0"/>
+</testsuite>

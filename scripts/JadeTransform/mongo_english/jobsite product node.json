@@ -1,0 +1,54 @@
+{
+            "code" : "jobsite",
+            "settings" : {
+                "dataEndPoints" : {
+                    "DataService" : {
+                        "EndPointAddress" : "http://201.234.199.99", //string address value
+                        "Port" : 35243, //int
+                        "Type" : "REST", //don't prompt
+                        "SubType" : "Client"  //don't prompt
+                    },
+                    "SocketEndPoint" : { //no prompt
+                        "EndPointAddress" : "http://127.0.0.1",
+                        "Port" : 20002,
+                        "Type" : "REST",
+                        "SubType" : "Server"
+                    }
+                },
+                "futureOrdersEmail" : {
+                    "generateTime" : "0700",
+                    "durationTimePeriod" : 3,
+                    "template" : "Future Order" //no prompt
+                },
+                "notifications" : { //only need to obtain the name and value. Value is an email type
+                    "orderRequest" : {
+                        "template" : "Order Request",
+                        "to" : {
+                            "name" : "Holcim Ecuador Online", //string
+                            "value" : "stalin.zurita@holcim.com"  //email
+                        }
+                    },
+                    "orderCreate" : { //no prompt
+                        "template" : "Order Create"
+                    },
+                    "ticketCreate" : {  //no prompt
+                        "template" : "Ticket Create"
+                    }
+                },
+                "company" : {
+                    "timeZone" : {
+						"defaultRegion" : "America", //This is known set of options
+                        "name" : "America/Guayaquil" //This is a set of options based ont he previous selection
+                    }
+                },
+                "user" : {
+                    "permissions" : {
+                        "batchWeights" : false,
+                        "truckTimes" : false,
+                        "pricing" : false,
+                        "mapping" : false,
+                        "futureOrderEmail" : false
+                    }
+                }
+            }
+        }

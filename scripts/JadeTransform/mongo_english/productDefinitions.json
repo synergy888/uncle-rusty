@@ -1,0 +1,137 @@
+[
+	{
+		"code": "~productDefinitions_commerce_code~",
+	    "name": "~productDefinitions_commerce_name~",
+	    "description": "~productDefinitions_commerce_description~",
+	    "roles": [
+	    	"~productDefinitions_commerce_roles~",
+			"~productDefinitions_commerce_roles2~",
+			"~productDefinitions_commerce_roles3~"
+	    ],
+        "platforms": {
+            "desktop": "~productDefinitions_commerce_platforms_desktop~",
+            "mobile": "~productDefinitions_commerce_platforms_mobile~",
+            "tablet": "~productDefinitions_commerce_platforms_tablet~"
+        },
+		"settings": {
+        }
+	},
+	{
+		"code": "~productDefinitions_ticket_code~",
+	    "name": "~productDefinitions_ticket_name~",
+	    "description": "~productDefinitions_ticket_description~",
+	    "roles": [
+	    	"~productDefinitions_ticket_roles~",
+			"~productDefinitions_ticket_roles2~",
+			"~productDefinitions_ticket_roles3~"
+	    ],
+        "platforms": {
+            "desktop": "~productDefinitions_ticket_platforms_desktop~",
+            "mobile": "~productDefinitions_ticket_platforms_mobile~",
+            "tablet": "~productDefinitions_ticket_platforms_tablet~"
+        },
+		"settings": {
+        }
+	},
+	{
+		"code": "~productDefinitions_bulkticket_code~",
+	    "name": "~productDefinitions_bulkticket_name~",
+	    "description": "~productDefinitions_bulkticket_description~",
+	    "roles": [
+	    	"~productDefinitions_bulkticket_roles~",
+			"~productDefinitions_bulkticket_roles2~",
+			"~productDefinitions_bulkticket_roles3~"
+	    ],
+        "platforms": {
+            "desktop": "~productDefinitions_bulkticket_platforms_desktop~",
+            "mobile": "~productDefinitions_bulkticket_platforms_mobile~",
+            "tablet": "~productDefinitions_bulkticket_platforms_tablet~"
+        },
+		"settings": {
+        }
+	},
+    {
+        "code": "~productDefinitions_jobsite_code~",
+        "name": "~productDefinitions_jobsite_name~",
+        "description": "~productDefinitions_jobsite_description~",
+        "roles": [
+            "~productDefinitions_jobsite_roles~",
+            "~productDefinitions_jobsite_roles2~",
+            "~productDefinitions_jobsite_roles3~",
+			"~productDefinitions_jobsite_roles4~"
+        ],
+        "platforms": {
+            "desktop": "~productDefinitions_jobsite_platforms_desktop~",
+            "mobile": "~productDefinitions_jobsite_platforms_mobile~",
+            "tablet": "~productDefinitions_jobsite_platforms_tablet~"
+        },
+		"settings": {"~productDefinitions_jobsite_settings~"
+        }
+    },
+	{
+		"code" : "~productDefinitions_supply_code~",
+		"name" : "~productDefinitions_supply_name~",
+		"description" : "~productDefinitions_supply_description~",
+		"roles" : [ 
+			{
+				"code" : "~productDefinitions_supply_roles_code~",
+				"name" : "~productDefinitions_supply_roles_name~",
+				"category" : "~productDefinitions_supply_roles_category~"
+			}, 
+			{
+				"code" : "~productDefinitions_supply_roles_code2~",
+				"name" : "~productDefinitions_supply_roles_name2~",
+				"category" : "~productDefinitions_supply_roles_category2~"
+			}, 
+			{
+				"code" : "~productDefinitions_supply_roles_code3~",
+				"name" : "~productDefinitions_supply_roles_name3~",
+				"category" : "~productDefinitions_supply_roles_category3~"
+			}, 
+			{
+				"code" : "~productDefinitions_supply_roles_code4~",
+				"name" : "~productDefinitions_supply_roles_name4~",
+				"category" : "~productDefinitions_supply_roles_category4~"
+			}, 
+			{
+				"code" : "~productDefinitions_supply_roles_code5~",
+				"name" : "~productDefinitions_supply_roles_name5~",
+				"category" : "~productDefinitions_supply_roles_category5~"
+			}, 
+			{
+				"code" : "~productDefinitions_supply_roles_code6~",
+				"name" : "~productDefinitions_supply_roles_name6~",
+				"category" : "~productDefinitions_supply_roles_category6~"
+			}
+		],
+		"platforms" : {
+			"desktop" : "~productDefinitions_supply_platforms_desktop~"
+		},
+		"settings" : {
+			"vendor" : "~productDefinitions_supply_settings_vendor~",
+			"permissions" : {
+				"configure" : "~productDefinitions_supply_settings_permissions_configure~",
+				"plan" : "~productDefinitions_supply_settings_permissions_plan~",
+				"alias" : "~productDefinitions_supply_settings_permissions_alias~"
+			},
+			"locations" : ["~productDefinitions_supply_settings_locations~"]
+		},
+		"appAdmin" : "~productDefinitions_supply_appAdmin~"
+	},
+	{
+        "code": "~productDefinitions_evoadmin_code~",
+        "name": "~productDefinitions_evoadmin_name~",
+        "description": "~productDefinitions_evoadmin_description~",
+        "roles": [
+            "~productDefinitions_evoadmin_roles~",
+            "~productDefinitions_evoadmin_roles2~"
+        ],
+        "platforms": {
+            "desktop": "~productDefinitions_evoadmin_platforms_desktop~",
+            "mobile": "~productDefinitions_evoadmin_platforms_mobile~",
+            "tablet": "~productDefinitions_evoadmin_platforms_tablet~"
+        },
+		"settings": {"~productDefinitions_evoadmin_settings~"
+        }
+    }
+]    

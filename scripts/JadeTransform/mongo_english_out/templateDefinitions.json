@@ -1,0 +1,182 @@
+[
+    {
+        "company": "concrite",
+        "name": "Order",
+        "transport": [
+            {
+                "type": "email",
+                "name": "Email",
+                "grouped": "true"
+            }
+        ],
+        "bod": [
+            {
+                "name": "Order"
+            }
+        ],
+        "formatter": "jade",
+        "subject": {
+            "type": "text",
+            "value": "|Order: #{Order.customer.order.code} #{moment(Order.customer.order.startTime).format('ll')}"
+        },
+        "content": {
+            "type": "file",
+            "value": "/opt/cai/evolution/assets/concrite/templates/order.jade",
+            "attachments": [
+                {
+                    "fileName": "",
+                    "filePath": "/opt/cai/evolution/assets/concrite/img/concrite.png",
+                    "cid": "concrite.png"
+                }
+            ]
+        },
+        "active": "true"
+    },
+    {
+        "company": "concrite",
+        "name": "Order SMS",
+        "transport": [
+            {
+                "type": "sms",
+                "name": "SMS",
+                "grouped": "false"
+            }
+        ],
+        "bod": [
+            {
+                "name": "Order"
+            }
+        ],
+        "formatter": "jade",
+        "subject": {
+            "type": "text",
+            "value": ""
+        },
+        "content": {
+            "type": "file",
+            "value": "/opt/cai/evolution/assets/concrite/templates/order.sms.jade"
+        },
+        "active": "true"
+    },
+    {
+        "company": "concrite",
+        "name": "Ticket",
+        "transport": [
+            {
+                "type": "email",
+                "name": "Email",
+                "grouped": "true"
+            }
+        ],
+        "bod": [
+            {
+                "name": "Ticket"
+            }
+        ],
+        "formatter": "jade",
+        "subject": {
+            "type": "text",
+            "value": "|Ticket: #{Ticket.customer.order.ticket.ticketNum}, for Order #{Ticket.customer.order.code}, #{moment(Ticket.customer.order.startTime).format('ll')} has been shipped"
+        },
+        "content": {
+            "type": "file",
+            "value": "/opt/cai/evolution/assets/concrite/templates/ticket.jade",
+            "attachments": [
+                {
+                    "fileName": "",
+                    "filePath": "/opt/cai/evolution/assets/concrite/img/concrite.png",
+                    "cid": "concrite.png"
+                }
+            ]
+        },
+        "active": "true"
+    },
+    {
+        "company": "concrite",
+        "name": "Ticket SMS",
+        "transport": [
+            {
+                "type": "sms",
+                "name": "SMS",
+                "grouped": "false"
+            }
+        ],
+        "bod": [
+            {
+                "name": "Ticket"
+            }
+        ],
+        "formatter": "jade",
+        "subject": {
+            "type": "text",
+            "value": ""
+        },
+        "content": {
+            "type": "file",
+            "value": "/opt/cai/evolution/assets/concrite/templates/ticket.sms.jade"
+        },
+        "active": "true"
+    },
+    {
+        "company": "concrite",
+        "name": "Order Request",
+        "transport": [
+            {
+                "type": "email",
+                "name": "Email",
+                "grouped": "true"
+            }
+        ],
+        "bod": [
+            {
+                "name": "OrderRequest"
+            }
+        ],
+        "formatter": "jade",
+        "subject": {
+            "type": "text",
+            "value": "|Reorder Request: !{customer.name} for #{moment(concrete.startDate).format('ll')}"
+        },
+        "content": {
+            "type": "file",
+            "value": "/opt/cai/evolution/assets/concrite/templates/reorder.jade",
+            "attachments": [
+                {
+                    "fileName": "",
+                    "filePath": "/opt/cai/evolution/assets/concrite/img/concrite.png",
+                    "cid": "concrite.png"
+                }
+            ]
+        },
+        "active": "true"
+    },
+    {
+        "company": "concrite",
+        "name": "Future Order",
+        "transport": [
+            {
+                "type": "email",
+                "name": "Email",
+                "grouped": "true"
+            }
+        ],
+        "bod": [],
+        "formatter": "jade",
+        "subject": {
+            "type": "text",
+            "value": "|Upcoming Orders"
+        },
+        "content": {
+            "type": "file",
+            "value": "/opt/cai/evolution/assets/concrite/templates/futureOrders.jade",
+            "attachments": [
+                {
+                    "fileName": "",
+                    "filePath": "/opt/cai/evolution/assets/concrite/img/concrite.png",
+                    "cid": "concrite.png"
+                }
+            ]
+        },
+        "active": "true"
+    }
+]

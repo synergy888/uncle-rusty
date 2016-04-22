@@ -1,0 +1,72 @@
+doctype html
+html(lang="en")
+    - var primaryBackgroundColor = '#FF0000';
+    - var primaryTextColor = '#000000';
+    - var secondaryBackgroundColor = '#393C45';
+    - var secondaryTextColor = '#';
+    - var logoName = 'cid:concrite.png';
+    - var generalBackgroundColor = '#ffffff';
+    - var localBackgroundColor = '#ffffff';
+    - var headerBorderColor = '#eee';
+    - var headerTextColor = '#393C45';
+    - var fontFamily = 'Arial';
+    - var primaryFontSize = '14px';
+    - var secondaryFontSize = '11px';
+    - var neutralBorderColor = 'gray';
+    - var title = 'Upcoming Orders';
+    
+    head
+        title #{title}
+    body
+        div(style="background-color: #{generalBackgroundColor}; width: 100%; height: 100%; font-family: '#{fontFamily}';")
+            div(style="background-color: #{primaryBackgroundColor};color: #{primaryTextColor};")
+                table(style="background-color: #{primaryBackgroundColor};color: #{primaryTextColor};border-top: solid 5px #{secondaryBackgroundColor};")
+                    tbody
+                        tr
+                            td(style="width:100%;")
+                                strong(style="padding: 10px 10px; margin: 0px;font-family: '#{fontFamily}';") Upcoming Orders
+                            td
+                                img(src="#{logoName}", alt="Logo")
+            div                                
+                table(style="width: 100%;background-color: #{generalBackgroundColor};")
+                    tr
+                        td(style="padding: 20px; width: 100%;")
+                            -var used={};
+                            each array, date in orders
+                                -var d=new Date(date);
+                                if !used.hasOwnProperty(moment(date).format("MMDDYY"))
+                                    h2(style="font-family: '#{fontFamily}';font-size: 12pt;border-bottom: solid 1px #{neutralBorderColor};padding: 0px 0px 0px 10px;") #{moment(date).format('LL')}
+                                    table(style="font-family: '#{fontFamily}', sans-serif; font-size: 10pt;text-align: left;background-color: #{localBackgroundColor};padding: 0px 0px 0px 10px;")
+                                        thead
+                                            tr
+                                                th(style="vertical-align: middle; padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em; border-bottom: 1px solid #{headerBorderColor}; text-align:left; min-width: 100px;") Order Code
+                                                th(style="vertical-align: middle; padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em; border-bottom: 1px solid #{headerBorderColor}; text-align:left; min-width: 100px;") Start Time
+                                                th(style="vertical-align: middle; padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em; border-bottom: 1px solid #{headerBorderColor}; text-align:left; min-width: 100px;") Status
+                                                th(style="vertical-align: middle; padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em; border-bottom: 1px solid #{headerBorderColor}; text-align:left; min-width: 100px;") Delivery Address
+                                                th(style="vertical-align: middle; padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em; border-bottom: 1px solid #{headerBorderColor}; text-align:left; min-width: 100px;") PO
+                                                th(style="vertical-align: middle; padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em; border-bottom: 1px solid #{headerBorderColor}; text-align:left; min-width: 100px;") Product Code
+                                                th(style="vertical-align: middle; padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em; border-bottom: 1px solid #{headerBorderColor}; text-align:left; min-width: 100px;") Project Name
+                                                th(style="vertical-align: middle; padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em; border-bottom: 1px solid #{headerBorderColor}; text-align:right; min-width: 100px;") Ordered Qty
+                                        tbody
+                                            each order in array
+                                                -var o=new Date(order.date);
+                                                -var d1=d.getUTCMonth() + "" + d.getUTCDate() + "" + d.getUTCFullYear();
+                                                -var d2=o.getUTCMonth() + "" + o.getUTCDate() + "" + o.getUTCFullYear();
+                                                if d1 == d2
+                                                    tr
+                                                        td(style="padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em;") #{order.code}
+                                                        td(style="padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em;") #{moment(order.startDateTime).format('LT')}
+                                                        td(style="padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em;") #{order.status}
+                                                        td(style="padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em;") #{order.shipTo.lineOne}
+                                                        td(style="padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em;") #{order.po}
+                                                        td(style="padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em;") #{order.productCode}
+                                                        td(style="padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em;") #{order.projectName}
+                                                        td(style="padding-top: 0.25em; padding-right: 0.35em; padding-left: 0.35em;text-align:right; ") #{Globalize.format(order.orderQty, 'n2')} #{order.qtyUOM}
+                                -used[moment(date).format("MMDDYY")]=moment(date).format("MMDDYY");
+                        
+            div(style="width: 100%; background-color: #{primaryBackgroundColor};color: #{primaryTextColor};")
+                table(style="width: 100%; background-color: #{primaryBackgroundColor};color: #{primaryTextColor};font-size: #{secondaryFontSize};border-top: solid 5px #{secondaryBackgroundColor};")
+                    tbody
+                        tr
+                            td(style="padding: 2px 3px 2px 5px;font-family: '#{fontFamily}';") You are this receiving this email because you chose to subscribe to future order notifications in <strong><a style="color:white;" href="https://!{company}.!{domain}/product/!{product}">MOBILEcommerce</a></strong>.
+

@@ -1,0 +1,8 @@
+- var startDT = Order.customer.order.startTime
+- try { startDT = Date.parse(startDT) } catch (e) { startDT = null }
+| Order #{Order.customer.order.code} accepted for delivery at
+if startDT
+    | #{moment(startDT).format('LT')}.
+| Address: #{Order.customer.order.shipTo.lineOne}. 
+| Product: #{Order.customer.order.productDescription}, #{Order.customer.order.orderQty} #{Order.customer.order.qtyUOM}. 
+| Track: !{company}.!{domain}/product/!{product}

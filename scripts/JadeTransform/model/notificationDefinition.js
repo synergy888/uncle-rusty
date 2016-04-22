@@ -1,0 +1,47 @@
+var notificationDefinition = {};
+
+notificationDefinition.mongo_language_folder = undefined;
+
+notificationDefinition.order_create_company = undefined;
+notificationDefinition.order_create_name = undefined;
+notificationDefinition.order_create_bod_name = undefined;
+notificationDefinition.order_create_bod_filterDefinitions_name = undefined;
+notificationDefinition.order_create_bod_filterDefinitions_type = undefined;
+notificationDefinition.order_create_bod_filterDefinitions_expression = undefined;
+notificationDefinition.order_create_bod_filterDefinitions_name2 = undefined;
+notificationDefinition.order_create_bod_filterDefinitions_type2 = undefined;
+notificationDefinition.order_create_bod_filterDefinitions_expression2 = undefined;
+notificationDefinition.order_create_bod_contextDefinitions = undefined;
+notificationDefinition.order_create_context = undefined;
+notificationDefinition.order_create_context2 = undefined;
+notificationDefinition.order_create_context3 = undefined;
+notificationDefinition.order_create_transports_type = undefined;
+notificationDefinition.order_create_transports_name = undefined;
+notificationDefinition.order_create_transports_grouped = undefined;
+notificationDefinition.order_create_transports_template_name = undefined;
+notificationDefinition.order_create_transports_type2 = undefined;
+notificationDefinition.order_create_transports_name2 = undefined;
+notificationDefinition.order_create_transports_grouped2 = undefined;
+notificationDefinition.order_create_transports_template_name2 = undefined;
+
+notificationDefinition.ticket_create_company = undefined;
+notificationDefinition.ticket_create_name = undefined;
+notificationDefinition.ticket_create_bod_name = undefined;
+notificationDefinition.ticket_create_bod_filterDefinitions_name = undefined;
+notificationDefinition.ticket_create_bod_filterDefinitions_type = undefined;
+notificationDefinition.ticket_create_bod_filterDefinitions_expression = undefined;
+notificationDefinition.ticket_create_bod_contextDefinitions = undefined;
+notificationDefinition.ticket_create_context = undefined;
+notificationDefinition.ticket_create_context2 = undefined;
+notificationDefinition.ticket_create_context3 = undefined;
+notificationDefinition.ticket_create_transports_type = undefined;
+notificationDefinition.ticket_create_transports_name = undefined;
+notificationDefinition.ticket_create_transports_grouped = undefined;
+notificationDefinition.ticket_create_transports_template_name = undefined;
+notificationDefinition.ticket_create_transports_type2 = undefined;
+notificationDefinition.ticket_create_transports_name2 = undefined;
+notificationDefinition.ticket_create_transports_grouped2 = undefined;
+notificationDefinition.ticket_create_transports_template_name2 = undefined;
+
+
+module.exports = notificationDefinition;

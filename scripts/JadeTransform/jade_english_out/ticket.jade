@@ -1,0 +1,107 @@
+!!!
+html
+- var primaryBackgroundColor = '#FF0000';
+- var primaryTextColor = '#000000';
+- var secondaryBackgroundColor = '#393C45';
+- var secondaryTextColor = '#';
+- var logoName = 'cid:concrite.png';
+- var generalBackgroundColor = '#ffffff';
+- var localBackgroundColor = '#ffffff';
+- var headerBorderColor = '#eee';
+- var headerTextColor = '#393C45';
+- var fontFamily = 'Arial';
+- var primaryFontSize = '14px';
+- var secondaryFontSize = '11px';
+- var title = 'Ticket: ';
+
+    head
+        title #{title} #{Ticket.customer.order.ticket.ticketNum}
+    body
+        -var ticket = Ticket.customer.order.ticket;
+        - var ticketTypedTime = null;
+        - var ticketLoadTime = null;
+        - for (var i = 0; i < ticket.ticketTimes.length; i++) {
+        -     if (ticket.ticketTimes[i].name == 'typedTime') {
+        -         ticketTypedTime = ticket.ticketTimes[i];
+        -     }
+        -     else if (ticket.ticketTimes[i].name == 'loadTime') {
+        -         ticketLoadTime = ticket.ticketTimes[i];
+        -     }
+        - }
+        - var ticketTime = ticketLoadTime || ticketTypedTime;
+        div(style="background-color: #{generalBackgroundColor}; width: 100%; height: 100%; font-family: '#{fontFamily}';")
+            div(style="background-color: #{primaryBackgroundColor};color: #{primaryTextColor};")
+                table(style="background-color: #{primaryBackgroundColor};color: #{primaryTextColor};border-top: solid 5px #{secondaryBackgroundColor};")
+                    tbody
+                        tr
+                            td(style="width:100%;")
+                                strong(style="padding: 10px 10px; margin: 0px;font-family: '#{fontFamily}';") Ticket #{ticket.ticketNum} #{ticket.status}
+                            td
+                                img(src="#{logoName}", alt="Logo")
+            div                                
+                table(style="width: 100%;background-color: #{generalBackgroundColor};")
+                    tr
+                        td(style="padding: 20px; width: 100%;")
+                            table(style="background-color: #{localBackgroundColor}; border: solid 2px #{secondaryBackgroundColor};font-size: #{primaryFontSize};width: 100%;")
+                                tr
+                                    td(style="padding: 0px 0px 10px 0px;")
+                                         table(style="width: 100%;")
+                                              tr
+                                                  td(style="width: 100%; padding: 10px 0px 0px 0px; border-bottom: 1px solid #{headerBorderColor};")
+                                                      strong(style="padding: 0px 0px 0px 10px;color: #{headerTextColor};font-family: '#{fontFamily}';") Customer
+                                              tr
+                                                  td(style="width: 100%; padding: 10px 0px 0px 10px;font-family: '#{fontFamily}';") #{Ticket.customer.name} (#{Ticket.customer.code})
+                                              tr
+                                                  td(style="width: 100%; padding: 10px 0px 0px 0px; border-bottom: 1px solid #{headerBorderColor};")
+                                                      strong(style="padding: 0px 0px 0px 10px;color: #{headerTextColor};font-family: '#{fontFamily}';") Shipping Plant
+                                              tr
+                                                  td(style="width: 100%; padding: 10px 0px 0px 10px;font-family: '#{fontFamily}';") #{ticket.plantName} (#{ticket.plantCode})
+                                
+                                tr
+                                    td(style="padding: 0px 0px 10px 0px;")
+                                         table(style="width: 100%;")
+                                              tr
+                                                  td(style="width: 100%; padding: 10px 0px 0px 0px; border-bottom: 1px solid #{headerBorderColor};")
+                                                      strong(style="padding: 0px 0px 0px 10px;color: #{headerTextColor};font-family: '#{fontFamily}';") Ticketed
+                                              //tr
+                                              //    td(style="width: 100%; padding: 10px 0px 0px 10px;font-family: '#{fontFamily}';") #{timezoneParser.parseTime(ticketTime.time)}
+                                              tr
+                                                  td(style="width: 100%; padding: 10px 0px 0px 10px;font-family: '#{fontFamily}';") Truck #{ticket.truckCode}  #{ticket.truckTypeDesc}
+                                
+                                tr
+                                    td(style="padding: 0px 0px 10px 0px;")
+                                         table(style="width: 100%;")
+                                              tr
+                                                  td(style="width: 100%; padding: 10px 0px 0px 0px; border-bottom: 1px solid #{headerBorderColor};")
+                                                      strong(style="padding: 0px 0px 0px 10px;color: #{headerTextColor};font-family: '#{fontFamily}';") Products
+                                              tr
+                                                  td(style="padding: 0px 10px 0px 10px;")
+                                                    table(style="border: none; width:100%;")
+                                                        thead(style="font-family: '#{fontFamily}';font-size: #{primaryFontSize};")
+                                                            tr
+                                                                td(style="width: 20%;text-align: left;"): strong Code
+                                                                td(style="width: 35%;text-align: left;"): strong Description
+                                                                td(style="width: 10%;text-align: right;"): strong Quantity
+                                                                td(style="width: 5%;text-align: left;"): strong UOM
+                                                                td(style="width: 15%;text-align: right;"): strong Unit Price
+                                                                td(style="width: 15%;text-align: right;"): strong Sub Total
+                                                        tbody(style="font-family: '#{fontFamily}';")
+                                                            each detail in ticket.ticketDetails
+                                                                tr
+                                                                    td(style="width: 20%;text-align: left;")= detail.productCode
+                                                                    td(style="width: 35%;text-align: left;")= detail.itemDescriptionShort
+                                                                    td(style="width: 10%;text-align: right;")= Globalize.format(detail.loadSize, "n")
+                                                                    td(style="width: 5%; text-align: left;text-transform: uppercase;")= detail.loadSizeUOM
+                                                                    td(style="width: 15%;text-align: right;")= Globalize.format(detail.unitPrice, "c")
+                                                                    td(style="width: 15%;text-align: right;")= Globalize.format((detail.loadSize * detail.unitPrice), "c")
+                                        
+            div(style="width: 100%; background-color: #{primaryBackgroundColor};color: #{primaryTextColor};")
+                table(style="width: 100%; background-color: #{primaryBackgroundColor};color: #{primaryTextColor};font-size: #{secondaryFontSize};border-top: solid 5px #{secondaryBackgroundColor};")
+                    tbody
+                        tr
+                            td(style="padding: 2px 3px 2px 5px;font-family: '#{fontFamily}';") You are receiving this email because you chose to subscribe to ticket notifications in MOBILEcommerce.
+                        tr
+                            td &nbsp;
+                        tr
+                            td(style="padding: 2px 3px 2px 5px;font-family: '#{fontFamily}';") For additional information or questions, please visit: <strong><a style="color:white;" href="http://!{company}.!{domain}/product/!{product}">MOBILEcommerce</a></strong>
+                                

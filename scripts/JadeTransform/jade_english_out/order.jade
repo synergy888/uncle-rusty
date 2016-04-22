@@ -1,0 +1,137 @@
+!!!
+html
+- var primaryBackgroundColor = '#FF0000';
+- var primaryTextColor = '#000000';
+- var secondaryBackgroundColor = '#393C45';
+- var secondaryTextColor = '#';
+- var logoName = 'cid:concrite.png';
+- var generalBackgroundColor = '#ffffff';
+- var localBackgroundColor = '#ffffff';
+- var headerBorderColor = '#eee';
+- var headerTextColor = '#393C45';
+- var fontFamily = 'Arial';
+- var primaryFontSize = '14px';
+- var secondaryFontSize = '11px';
+- var title = 'Order: ';
+
+    head
+        title #{title} #{Order.customer.order.code}
+    body
+        div(style="background-color: #{generalBackgroundColor}; width: 100%; height: 100%; font-family: '#{fontFamily}';")
+            div(style="background-color: #{primaryBackgroundColor};color: #{primaryTextColor};")
+                table(style="background-color: #{primaryBackgroundColor};color: #{primaryTextColor};border-top: solid 5px #{secondaryBackgroundColor};")
+                    tbody
+                        tr
+                            td(style="width:100%;")
+                                strong(style="padding: 10px 10px; margin: 0px;font-family: '#{fontFamily}';") Order Scheduled
+                            td
+                                img(src="#{logoName}", alt="Logo")
+            div                                
+                table(style="width: 100%;background-color: #{generalBackgroundColor};")
+                    tr
+                        td(style="padding: 20px;width: 100%;")
+                            table(style="background-color: #{localBackgroundColor}; border: solid 2px #{secondaryBackgroundColor};font-size: #{primaryFontSize};width: 100%;")
+                                tr
+                                    td(style="padding: 0px 0px 10px 0px;border-bottom: 1px solid #{headerBorderColor};")
+                                        - var startDT = Order.customer.order.startTime
+                                        - var date = startDT.split('T')[0] + 'T'
+                                        - var time = startDT.split('T')[1]
+                                        - time = time.split('-')[0]
+                                        - startDT = date + time 
+                                        - try { startDT = startDT } catch (e) { startDT = null }
+                                         table(style="width: 100%;")
+                                              tr
+                                                  td(style="width: 20%; padding: 10px 0px 0px 0px;")
+                                                      strong(style="padding: 0px 0px 0px 10px;color: #{headerTextColor};font-family: '#{fontFamily}';") Order Code
+                                                  td(style="width: 80%;padding: 10px 0px 0px 0px;text-align: left;font-family: '#{fontFamily}'};") #{Order.customer.order.code} has been Created
+                                              tr
+                                                  td(style="width: 20%; padding: 10px 0px 0px 0px;")
+                                                      strong(style="padding: 0px 0px 0px 10px;color: #{headerTextColor};font-family: '#{fontFamily}';") Customer:
+                                                  td(style="width: 80%;padding: 10px 0px 0px 0px;text-align: left;font-family: '#{fontFamily}';") #{Order.customer.name}
+                                              
+                                              tr
+                                                  td(style="width: 20%; padding: 10px 0px 0px 0px;")
+                                                      strong(style="padding: 0px 0px 0px 10px;color: #{headerTextColor};font-family: '#{fontFamily}';") Project Code:
+                                                  td(style="width: 80%;padding: 10px 0px 0px 0px;text-align: left;font-family: '#{fontFamily}';") #{Order.customer.order.projectCode}
+                                              tr
+                                                  td(style="width: 20%; padding: 10px 0px 0px 0px;")
+                                                      strong(style="padding: 0px 0px 0px 10px;color: #{headerTextColor};font-family: '#{fontFamily}';") Project Name:
+                                                  td(style="width: 80%;padding: 10px 0px 0px 0px;text-align: left;font-family: '#{fontFamily}';") #{Order.customer.order.projectName}
+                                
+                                tr
+                                    td(style="padding: 0px 0px 10px 0px;")
+                                         table(style="width: 100%;")
+                                              tr
+                                                  td(style="width: 100%; padding: 10px 0px 0px 0px;border-bottom: 1px solid #{headerBorderColor};")
+                                                      strong(style="padding: 0px 0px 0px 10px;color: #{headerTextColor};font-family: '#{fontFamily}';") Delivery Address:
+                                              -var shipTo = Order.customer.order.shipTo
+                                              if shipTo
+                                              tr
+                                                  td(style="width:100%;padding: 10px 0px 0px 10px; text-align: left;font-family: '#{fontFamily}';") #{shipTo.lineOne || ""}
+                                              tr
+                                                  td(style="width:100%;padding: 0px 0px 0px 10px; text-align: left;font-family: '#{fontFamily}';") #{shipTo.lineTwo || ""}
+                                              tr
+                                                  td(style="width:100%;padding: 0px 0px 0px 10px; text-align: left;font-family: '#{fontFamily}';") #{shipTo.city || ""}
+                                              tr
+                                                  td(style="width:100%;padding: 0px 0px 0px 10px; text-align: left;font-family: '#{fontFamily}';") #{shipTo.countrySubdivisionCode || ""}
+                                              tr
+                                                  td(style="width:100%;padding: 0px 0px 0px 10px; text-align: left;font-family: '#{fontFamily}';") #{shipTo.postalCode || ""}
+                                
+                                if startDT
+                                tr
+                                    td(style="padding: 0px 0px 10px 0px;border-bottom: 1px solid #{headerBorderColor};")
+                                         table(style="width: 100%;")
+                                              tr
+                                                  td(style="width: 30%; padding: 10px 0px 0px 0px;")
+                                                      strong(style="padding: 0px 0px 0px 10px;color: #{headerTextColor};font-family: '#{fontFamily}';") The estimated delivery date/time is:&nbsp;
+                                                  td(style="width: 70%; padding: 10px 0px 0px 0px; text-align: left;font-family: '#{fontFamily}';") #{moment(startDT).format('LLL')}
+                                
+                                tr
+                                    td(style="padding: 0px 0px 10px 0px;")
+                                         table(style="width: 100%;")
+                                              tr
+                                                  td(style="width: 100%; padding: 10px 0px 0px 0px; border-bottom: 1px solid #{headerBorderColor};")
+                                                      strong(style="padding: 0px 0px 0px 10px;color: #{headerTextColor};font-family: '#{fontFamily}';") Product
+                                              tr
+                                                  td(style="padding: 0px 10px 0px 10px;")
+                                                    table(style="border: none; width:100%;")
+                                                        thead(style="font-family: '#{fontFamily}';font-size: #{primaryFontSize};")
+                                                            tr
+                                                                td(style="text-align: left;"): strong Code
+                                                                td(style="text-align: left;"): strong Description
+                                                                td(style="text-align: right;"): strong Quantity Ordered
+                                                        tbody(style="font-family: '#{fontFamily}';")
+                                                            tr
+                                                                td(style="text-align: left;") #{Order.customer.order.productCode}
+                                                                td(style="text-align: left;") #{Order.customer.order.productDescription}
+                                                                td(style="text-align: right;") #{Globalize.format(Order.customer.order.orderQty, 'n2')} #{Order.customer.order.qtyUOM}
+                                         -var numExtraItems = Order.customer.order.products.length;
+                                         if (numExtraItems > 0)
+                                             table(style="width: 100%;")
+                                                  tr
+                                                      td(style="width: 100%; padding: 10px 0px 0px 0px; border-bottom: 1px solid #{headerBorderColor};")
+                                                          strong(style="padding: 0px 0px 0px 10px;color: #{headerTextColor};font-family: '#{fontFamily}';") Extra Items
+                                                  tr
+                                                      td(style="padding: 0px 10px 0px 10px;")
+                                                        table(style="border: none; width:100%;")
+                                                            thead(style="font-family: '#{fontFamily}';font-size: #{primaryFontSize};")
+                                                                tr
+                                                                    td(style="text-align: left;"): strong Code
+                                                                    td(style="text-align: left;"): strong Description
+                                                                    td(style="text-align: right;"): strong Quantity Ordered
+                                                            tbody(style="font-family: '#{fontFamily}';")
+                                                                each extraItem in Order.customer.order.products
+                                                                    tr
+                                                                        td(style="text-align: left;") #{extraItem.productCode}
+                                                                        td(style="text-align: left;") #{extraItem.productDescription}
+                                                                        td(style="text-align: right;") #{Globalize.format(extraItem.orderQty, 'n2')} #{extraItem.qtyUOM}
+            div(style="width: 100%; background-color: #{primaryBackgroundColor};color: #{primaryTextColor};")
+                table(style="width: 100%; background-color: #{primaryBackgroundColor};color: #{primaryTextColor};font-size: #{secondaryFontSize};border-top: solid 5px #{secondaryBackgroundColor};")
+                    tbody
+                        tr
+                            td(style="padding: 2px 3px 2px 5px;font-family: '#{fontFamily}';") You are receiving this email because you chose to subscribe to order notifications in MOBILEcommerce.
+                        tr
+                            td &nbsp;
+                        tr
+                            td(style="padding: 2px 3px 2px 5px;font-family: '#{fontFamily}';") For additional information or questions, please visit: <strong><a style="color:white;" href="http://!{company}.!{domain}/product/!{product}">MOBILEcommerce</a></strong>
+                                

@@ -7,7 +7,7 @@ var fs = require('fs');
 
 module.exports = {
 
-    processData : function () {
+    processData : function (dropDB) {
         var self = this;
         var inputFolder = process.env.MONGO_INPUT_FOLDER;
         if (inputFolder === undefined) {
@@ -28,7 +28,7 @@ module.exports = {
                 util.handleError(err);
             }
 
-            result.inputFolder = 'scripts/JadeTransform/' + result.inputFolder;
+            result.inputFolder = __dirname + '/' + result.inputFolder;
 
             checkInputDir(result.inputFolder, function(exist){
                if(exist) {
@@ -54,7 +54,7 @@ module.exports = {
                            util.handleError(err);
                        }
 
-                       configMongo.output_folder = 'scripts/JadeTransform/' + result.outputFolder;
+                       configMongo.output_folder = __dirname + '/' + result.outputFolder;
 
                        var output_to_folder_only = {
                            properties: {
@@ -74,11 +74,13 @@ module.exports = {
                            }
                            if (result.outputFolderOnly.substring(0, 1) === 'n') {
                                configMongo.output_to_folder_only = 'n';
+                               if(dropDB){
+                                   util.dropDatabase(configMongo.company_code);
+                               }
                            }
                            else {
                                configMongo.output_to_folder_only = 'y';
                            }
-
 
                            setTimeout(function () {
                                global.transformMongoProperties = transform.populateTransformObjects(configMongo);

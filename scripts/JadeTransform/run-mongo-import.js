@@ -21,6 +21,8 @@ if(argv.rollback){
 
 } else {
 
+    console.log(__dirname);
+
     prompt.override = argv;
 
     console.log('\n\nThe purpose of this app is to setup a new company by modifying Mongo JSON seed data files and creating new Mongo JSON seed data files for the new company.  ');
@@ -137,7 +139,7 @@ if(argv.rollback){
                                             product2.product2Install(function() {
                                                 product3.product3Install(function() {
                                                     product4.product4Install(function(){
-                                                        processData.processData();
+                                                        processData.processData(false);
                                                     });
                                                 });
                                             });
@@ -153,7 +155,7 @@ if(argv.rollback){
                                     product2.product2Install(function() {
                                         product3.product3Install(function() {
                                             product4.product4Install(function(){
-                                                processData.processData();
+                                                processData.processData(false);
                                             });
                                         });
                                     });
@@ -171,8 +173,7 @@ if(argv.rollback){
                                     product2.product2InstallFromDB(function(){
                                         product3.product3InstallFromDB(function(){
                                             product4.product4InstallFromDB(function(){
-                                                util.dropDatabase(configMongo.company_code);
-                                                processData.processData();
+                                                processData.processData(true);
                                             });
                                         })
                                     })

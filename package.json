@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "date": "2016-04-21 17:53:07 +00:00",
   "private": true,
-  "main": "/scripts/JadeTransform/run-mongo-import.js",
+  "main": "scripts/JadeTransform/run-mongo-import.js",
   "scripts": {
-    "start": "node /scripts/JadeTransform/run-mongo-import.js",
-    "test": "/scripts/test.bat"
+    "start": "node scripts/JadeTransform/run-mongo-import.js",
+    "test": "scripts/test.bat"
   },
   "dependencies": {
     "async": "^1.5.0",

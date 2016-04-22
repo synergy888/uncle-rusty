@@ -18,6 +18,8 @@ module.exports = {
                 company_description : {
                     message: configPrompt.company_description,
                     default: Companies_description,
+                    //validator: /^[a-zA-Z0-9]*$/,
+                    //warning: 'Special characters not allowed.',
                     required: false
                 }
             }
@@ -47,6 +49,8 @@ module.exports = {
                     Companies_status: {
                         message: configPrompt.company_status,
                         default: Companies_status,
+                        validator: /^(y[es]*|n[o]*)$/,
+                        warning: 'You must enter yes or no',
                         required: false
                     }
                 }
@@ -76,6 +80,8 @@ module.exports = {
                         Companies_settings_communications_email_from_name: {
                             message: configPrompt.comapny_email_name,
                             default: Companies_settings_communications_email_from_name,
+                            //validator: /^[a-zA-Z0-9]*$/,
+                            //warning: 'Special characters not allowed.',
                             required: false
                         }
                     }
@@ -99,6 +105,8 @@ module.exports = {
                             Companies_settings_communications_email_from_value: {
                                 message: configPrompt.company_email_id,
                                 default: Companies_settings_communications_email_from_value,
+                                validator: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/,
+                                warning: 'Enter valid email.',
                                 required: false
                             }
                         }
@@ -124,6 +132,8 @@ module.exports = {
                                 Companies_settings_cloudStore: {
                                     message: configPrompt.has_cloud_storage,
                                     default: Companies_settings_cloudStore,
+                                    validator: /^(y[es]*|n[o]*)$/,
+                                    warning: 'You must enter yes or no',
                                     required: false
                                 }
                             }
@@ -149,6 +159,8 @@ module.exports = {
                                     env: {
                                         message: configPrompt.environment,
                                         default: 'y',
+                                        validator: /^(y[es]*|n[o]*)$/,
+                                        warning: 'You must enter yes or no',
                                         required: false
                                     }
                                 }
@@ -181,6 +193,8 @@ module.exports = {
                 flag: {
                     message: 'Do you want to modify non-product related company information?',
                     default: 'y',
+                    validator: /^(y[es]*|n[o]*)$/,
+                    warning: 'You must enter yes or no',
                     required: false
                 }
             }
@@ -225,6 +239,8 @@ module.exports = {
                                         company_description: {
                                             message: configPrompt.company_description,
                                             default: Companies_description,
+                                            //validator: /^[a-zA-Z0-9]*$/,
+                                            //warning: 'Special characters not allowed.',
                                             required: false
                                         }
                                     }
@@ -250,6 +266,8 @@ module.exports = {
                                             Companies_status: {
                                                 message: configPrompt.company_status,
                                                 default: Companies_status,
+                                                validator: /^(y[es]*|n[o]*)$/,
+                                                warning: 'You must enter yes or no',
                                                 required: false
                                             }
                                         }
@@ -279,6 +297,8 @@ module.exports = {
                                                 Companies_settings_communications_email_from_name: {
                                                     message: configPrompt.comapny_email_name,
                                                     default: Companies_settings_communications_email_from_name,
+                                                    //validator: /^[a-zA-Z0-9]*$/,
+                                                    //warning: 'Special characters not allowed.',
                                                     required: false
                                                 }
                                             }
@@ -302,6 +322,8 @@ module.exports = {
                                                     Companies_settings_communications_email_from_value: {
                                                         message: configPrompt.company_email_id,
                                                         default: Companies_settings_communications_email_from_value,
+                                                        validator: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/,
+                                                        warning: 'Enter valid email.',
                                                         required: false
                                                     }
                                                 }
@@ -326,6 +348,8 @@ module.exports = {
                                                         Companies_settings_cloudStore: {
                                                             message: configPrompt.has_cloud_storage,
                                                             default: Companies_settings_cloudStore,
+                                                            validator: /^(y[es]*|n[o]*)$/,
+                                                            warning: 'You must enter yes or no',
                                                             required: false
                                                         }
                                                     }
@@ -354,6 +378,8 @@ module.exports = {
                                                             env: {
                                                                 message: configPrompt.environment,
                                                                 default: env,
+                                                                validator: /^(y[es]*|n[o]*)$/,
+                                                                warning: 'You must enter yes or no',
                                                                 required: false
                                                             }
                                                         }

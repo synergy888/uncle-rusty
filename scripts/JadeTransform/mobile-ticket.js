@@ -18,6 +18,8 @@ module.exports = {
                 product2_installation: {
                     message: configPrompt.installProduct(product2_installation),
                     default: 'y',
+                    validator: /^(y[es]*|n[o]*)$/,
+                    warning: 'You must enter yes or no',
                     required: false
                 }
             }
@@ -29,7 +31,7 @@ module.exports = {
                 util.handleError(err);
             }
 
-            if (result.product2_installation.toLowerCase() === 'y') {
+            if (result.product2_installation.substring(0,1) === 'y') {
 
                 configMongo.product2_install = 'y';
                 result.product2_installation = configMongo.product2_installation;
@@ -71,6 +73,8 @@ module.exports = {
                             edx_gateway_port: {
                                 message: configPrompt.edx_gateway_port,
                                 default: edx_gateway_port,
+                                validator: /^[0-9]*$/,
+                                warning: 'Only numbers are allowed.',
                                 required: false
                             }
                         }
@@ -124,6 +128,8 @@ module.exports = {
                                         flag: {
                                             message: configPrompt.productAlreadyInstalled(configMongo.product2_installation),
                                             default: 'y',
+                                            validator: /^(y[es]*|n[o]*)$/,
+                                            warning: 'You must enter yes or no',
                                             required: false
                                         }
                                     }
@@ -191,6 +197,8 @@ module.exports = {
                                                                     edx_gateway_port: {
                                                                         message: configPrompt.edx_gateway_port,
                                                                         default: edx_gateway_port,
+                                                                        validator: /^[0-9]*$/,
+                                                                        warning: 'Only numbers are allowed.',
                                                                         required: false
                                                                     }
                                                                 }

@@ -17,12 +17,10 @@ var mongo_transform = {
      * @returns {true/false} boolean true/false on transform operation
      */
     transformMongoJSONFile: function(transformProperties, sourceFile, destinationFile){
-        //companies-v1.3.json contains latest template to hold companies data after 1.3 is the only supporting vesion.
-        //companies.json in the inut folder is 1.2 companies version json file.
         try {
-            var fs = require('fs')
+            var fs = require('fs');
             var data = fs.readFileSync(sourceFile).toString();
-            if (sourceFile.indexOf('companies-v1.3.json') > -1) {
+            if (sourceFile.indexOf('companies.json') > -1) {
                 data = data.replace(/~Companies_code~/g, transformMongoProperties.companyObj.code);
                 data = data.replace(/~Companies_description~/g, transformMongoProperties.companyObj.description);
                 data = data.replace(/~Companies_status~/g, transformMongoProperties.companyObj.status);

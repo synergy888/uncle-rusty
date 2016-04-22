@@ -31,7 +31,7 @@ if(argv.rollback){
     var promptVerify = {
         name: 'yesno',
         message: 'Do you wish to continue?',
-        validator: /y[es]*|n[o]?/,
+        validator: /^(y[es]*|n[o]*)$/,
         warning: 'You must enter yes or no',
         default: 'yes'
     };
@@ -89,7 +89,9 @@ if(argv.rollback){
                     neworexisting: {
                         message: configPrompts.new_customer_prompt,
                         default: new_or_existing,
-                        required: false
+                        validator: /^(y[es]*|n[o]*)$/,
+                        warning: 'You must enter yes or no',
+                        required: true
                     }
                 }
             };
@@ -112,6 +114,8 @@ if(argv.rollback){
                                     exist : {
                                         message : configPrompts.customer_already_exist,
                                         default : 'y',
+                                        validator: /^(y[es]*|n[o]*)$/,
+                                        warning: 'You must enter yes or no',
                                         required : true
                                     }
                                 }

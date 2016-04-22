@@ -11,7 +11,7 @@ module.exports = {
         var self = this;
         var inputFolder = process.env.MONGO_INPUT_FOLDER;
         if (inputFolder === undefined) {
-            inputFolder = './' + configMongo.input_folder;
+            inputFolder = configMongo.input_folder;
         }
         var promptInputFolder = {
             properties: {
@@ -28,6 +28,8 @@ module.exports = {
                 util.handleError(err);
             }
 
+            result.inputFolder = 'scripts/JadeTransform/' + result.inputFolder;
+
             checkInputDir(result.inputFolder, function(exist){
                if(exist) {
                    console.log('input folder: ' + result.inputFolder);
@@ -35,7 +37,7 @@ module.exports = {
 
                    var outputFolder = process.env.MONGO_OUTPUT_FOLDER;
                    if (outputFolder === undefined) {
-                       outputFolder = './' + configMongo.output_folder;
+                       outputFolder = configMongo.output_folder;
                    }
                    var promptOutputFolder = {
                        properties: {
@@ -52,13 +54,15 @@ module.exports = {
                            util.handleError(err);
                        }
 
-                       configMongo.output_folder = result.outputFolder;
+                       configMongo.output_folder = 'scripts/JadeTransform/' + result.outputFolder;
 
                        var output_to_folder_only = {
                            properties: {
                                outputFolderOnly: {
                                    message: configPrompt.import_to_mongo,
                                    default: configMongo.output_to_folder_only,
+                                   validator: /^(y[es]*|n[o]*)$/,
+                                   warning: 'You must enter yes or no',
                                    required: false
                                },
                            }
@@ -204,7 +208,7 @@ module.exports = {
      */
     transformMongoJSONFile : function (transformProperties) {
         if (configMongo.commerceversion === '1.3') {
-            var bReturn = transform.transformMongoJSONFile(transformProperties, transformProperties.input_folder + '/companies-v1.3.json', transformProperties.output_folder + '/companies.json');
+            var bReturn = transform.transformMongoJSONFile(transformProperties, transformProperties.input_folder + '/companies.json', transformProperties.output_folder + '/companies.json');
         }
         else {
             var bReturn = transform.transformMongoJSONFile(transformProperties, transformProperties.input_folder + '/companies.json', transformProperties.output_folder + '/companies.json');
@@ -253,7 +257,7 @@ function checkInputDir(directory,callback){
                 if(fs.statSync(directory+'/templateDefinitions.json').isFile()) {
                     if(fs.statSync(directory+'/productDefinitions.json').isFile()) {
                         if(fs.statSync(directory+'/notificationDefinitions.json').isFile()) {
-                            if(fs.statSync(directory+'/companies-v1.3.json').isFile()) {
+                            if(fs.statSync(directory+'/companies.json').isFile()) {
                                 callback(true);
                             } else {
                                 callback(false);

@@ -18,6 +18,8 @@ module.exports = {
                 product_installation: {
                     message: configPrompt.installProduct(configMongo.product_installation),
                     default: product_installation,
+                    validator: /^(y[es]*|n[o]*)$/,
+                    warning: 'You must enter yes or no',
                     required: false
                 }
             }
@@ -29,7 +31,7 @@ module.exports = {
                 util.handleError(err);
             }
 
-            if (result.product_installation.toLowerCase() === 'y') {
+            if (result.product_installation.substring(0,1) === 'y') {
 
                 configMongo.product1_install = 'y';
                 result.product_installation = configMongo.product_installation;
@@ -45,6 +47,8 @@ module.exports = {
                         system_type : {
                             message : configPrompt.system_type,
                             default : 'n',
+                            validator: /^(y[es]*|n[o]*)$/,
+                            warning: 'You must enter yes or no',
                             required : false
                         }
                     }
@@ -73,6 +77,8 @@ module.exports = {
                             generate_time: {
                                 message: configPrompt.email_generate_time,
                                 default: futureOrderEmailGenerateTime,
+                                validator: /^[0-9]*$/,
+                                warning: 'Only numbers are allowed.',
                                 required: false
                             }
                         }
@@ -97,6 +103,8 @@ module.exports = {
                                 duration_time: {
                                     message: configPrompt.email_duration_period,
                                     default: futureOrderEmailDurationTime,
+                                    validator: /^[0-9]*$/,
+                                    warning: 'Only numbers are allowed.',
                                     required: false
                                 }
                             }
@@ -147,6 +155,8 @@ module.exports = {
                                         end_point_port: {
                                             message: configPrompt.end_point_port,
                                             default: end_point_port,
+                                            validator: /^[0-9]*$/,
+                                            warning: 'Only numbers are allowed.',
                                             required: false
                                         }
                                     }
@@ -170,6 +180,8 @@ module.exports = {
                                             reorder_request_mail: {
                                                 message: configPrompt.reorder_request_mail,
                                                 default: reorder_request_mail,
+                                                validator: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/,
+                                                warning: 'Enter valid email.',
                                                 required: false
                                             }
                                         }
@@ -192,6 +204,8 @@ module.exports = {
                                                 on_base: {
                                                     message: configPrompt.on_base,
                                                     default: on_base,
+                                                    validator: /^(y[es]*|n[o]*)$/,
+                                                    warning: 'You must enter yes or no',
                                                     required: false
                                                 }
                                             }
@@ -275,6 +289,8 @@ module.exports = {
                                         flag: {
                                             message: configPrompt.productAlreadyInstalled(configMongo.product_installation),
                                             default: 'y',
+                                            validator: /^(y[es]*|n[o]*)$/,
+                                            warning: 'You must enter yes or no',
                                             required: false
                                         }
                                     }
@@ -285,7 +301,6 @@ module.exports = {
                                         util.handleError(err);
                                     }
                                     if (result.flag.substring(0, 1) === 'y') {
-                                        var data = {};
                                         var url = 'mongodb://' + configMongo.mongoHost + ':' + configMongo.mongoPort + '/'+ configMongo.company_code;
                                         MongoClient.connect(url, function(err, db) {
                                             if (err) {
@@ -309,6 +324,8 @@ module.exports = {
                                                                 system_type : {
                                                                     message : configPrompt.system_type,
                                                                     default : 'n',
+                                                                    validator: /^(y[es]*|n[o]*)$/,
+                                                                    warning: 'You must enter yes or no',
                                                                     required : false
                                                                 }
                                                             }
@@ -338,6 +355,8 @@ module.exports = {
                                                                     generate_time: {
                                                                         message: configPrompt.email_generate_time,
                                                                         default: futureOrderEmailGenerateTime,
+                                                                        validator: /^[0-9]*$/,
+                                                                        warning: 'Only numbers are allowed.',
                                                                         required: false
                                                                     }
                                                                 }
@@ -362,6 +381,8 @@ module.exports = {
                                                                         duration_time: {
                                                                             message: configPrompt.email_duration_period,
                                                                             default: futureOrderEmailDurationTime,
+                                                                            validator: /^[0-9]*$/,
+                                                                            warning: 'Only numbers are allowed.',
                                                                             required: false
                                                                         }
                                                                     }
@@ -409,6 +430,8 @@ module.exports = {
                                                                                 end_point_port: {
                                                                                     message: configPrompt.end_point_port,
                                                                                     default: end_point_port,
+                                                                                    validator: /^[0-9]*$/,
+                                                                                    warning: 'Only numbers are allowed.',
                                                                                     required: false
                                                                                 }
                                                                             }
@@ -432,6 +455,8 @@ module.exports = {
                                                                                     reorder_request_mail: {
                                                                                         message: configPrompt.reorder_request_mail,
                                                                                         default: reorder_request_mail,
+                                                                                        validator: /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/,
+                                                                                        warning: 'Enter valid email.',
                                                                                         required: false
                                                                                     }
                                                                                 }
@@ -454,6 +479,8 @@ module.exports = {
                                                                                         on_base: {
                                                                                             message: configPrompt.on_base,
                                                                                             default: on_base,
+                                                                                            validator: /^(y[es]*|n[o]*)$/,
+                                                                                            warning: 'You must enter yes or no',
                                                                                             required: false
                                                                                         }
                                                                                     }

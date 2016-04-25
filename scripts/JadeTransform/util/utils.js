@@ -1,5 +1,6 @@
 var MongoClient = require('mongodb').MongoClient;
 var config = require('../../JadeTransform/config-mongo.js');
+var Q = require('q');
 
 module.exports = {
     /**
@@ -24,14 +25,15 @@ module.exports = {
     /**
      * Returns true if customer exist
      * else false.
+     * @param {String} code Database name
      */
-    customerExist : function(code, cb){
+    customerExist : function(code){
+        var deferred = Q.defer();
         var url = 'mongodb://'+config.mongoHost+':'+config.mongoPort+'/'+ code;
 
         MongoClient.connect(url, function(err, db) {
             if (err) {
-                throw err;
-                cb(false);
+                deferred.reject(err);
             }
             else {
                 var company = db.collection('company');
@@ -39,21 +41,23 @@ module.exports = {
                     code : code
                 }).toArray(function(err, result){
                     if (err) {
-                        this.handleError(err);
+                        deferred.reject(err);
                         db.close();
                     }
                     else {
                         if (result.length) {
-                            cb(true);
+                            deferred.resolve(true);
                         }
                         else {
-                            cb(false);
+                            deferred.resolve(false);
                         }
                         db.close();
                     }
                 });
             }
         });
+
+        return deferred.promise;
     },
 
     dropDatabase : function(code) {
@@ -70,13 +74,5 @@ module.exports = {
                 });
             }
         });
-    },
-
-    getTimezoneData : function(timezone) {
-        return {
-            operator : timezone.substr(0, 1),
-            hours : timezone.substr(1, 2),
-            minutes : timezone.substr(3)
-        }
     }
 };

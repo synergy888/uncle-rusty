@@ -41,7 +41,7 @@ describe('Test mongo transformation', function(){
 
             expect(path.resolve('../scripts/JadeTransform/'+ config.input_folder +'/notificationDefinitions.json')).to.be.a.file().with.json;
 
-            //expect(path.resolve('../scripts/JadeTransform/'+config.input_folder+'/companies-v1.3.json')).to.be.a.file().with.json;
+            //expect(path.resolve('../scripts/JadeTransform/'+config.input_folder+'/companies.json')).to.be.a.file().with.json;
             
         });
     });

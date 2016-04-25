@@ -4,7 +4,6 @@ var _ = require('lodash');
 var shell = require("shelljs");
 var config = require('./../JadeTransform/config-mongo.js');
 var checkPort = require('tcp-port-used');
-var colors = require('colors');
 
 /**
  * Checks to see if anything is running on the specified mongo port (defaults to 27017)

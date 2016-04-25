@@ -6,7 +6,7 @@
   "main": "scripts/JadeTransform/run-mongo-import.js",
   "scripts": {
     "start": "node scripts/JadeTransform/run-mongo-import.js",
-    "test": "scripts/test.bat"
+    "test": "scripts/test.sh || scripts\\test.bat"
   },
   "dependencies": {
     "async": "^1.5.0",

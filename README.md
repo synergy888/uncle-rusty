@@ -25,7 +25,7 @@ Please install node.js, mongodb to run the application and karma, mocha and chai
 * [Mocha.js] - Mocha is a JavaScript test framework running on node.js, featuring browser support, asynchronous testing, test coverage reports, and use of any assertion library.
 * [Chai.js] - Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework..
 
-### Installation (Prompts and Mongo)
+### Installation (Mongo)
 ```sh
 $ cd <project-folder> : application folder. e.g. c:\uncle-rusty is the <project-folder>.
 $ npm install : It installs everything required to run the application.
@@ -33,7 +33,7 @@ $ cd scripts/JadeTransform : Change directory to main entry point.
 $ node run-mongo-import.js OR $ node run-mongo-import
 ```
 
-### Installation (Promppts and Jade)
+### Installation (Jade)
 ```sh
 $ cd <project-folder> : application folder. e.g. c:\uncle-rusty is the <project-folder>.
 $ npm install : It installs everything required to run the application.

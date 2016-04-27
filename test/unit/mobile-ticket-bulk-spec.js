@@ -18,7 +18,7 @@ describe('Test Prompts', function(){
 			});
 
 			it('should return \'http://localhost\' for edx gateway ip', function(){
-				expect(transformProperties.companyObj.products_ticket_settings_dataEndPoints_EDXTicketService_EndPointAddress).equal('http://localhost');
+				expect(transformProperties.companyObj.products_bulkticket_settings_dataEndPoints_EDXTicketService_EndPointAddress).equal('http://localhost');
 			});
 
 			it('should match edx gateway port prompt text (What is the EDX Gateway Port?)', function(){
@@ -26,7 +26,11 @@ describe('Test Prompts', function(){
 			});
 
 			it('should return \'35245\' for edx gateway port', function(){
-				expect(transformProperties.companyObj.products_ticket_settings_dataEndPoints_EDXTicketService_Port).equal(35245);
+				expect(transformProperties.companyObj.products_bulkticket_settings_dataEndPoints_EDXTicketService_Port).equal(35245);
+			});
+
+			it('should match only numbers', function(){
+				expect(transformProperties.companyObj.products_bulkticket_settings_dataEndPoints_EDXTicketService_Port).to.match(/^[0-9]*$/);
 			});
 		});
 	});

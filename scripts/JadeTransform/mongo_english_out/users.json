@@ -1,7 +1,8 @@
 [
 	{
         "userName": "newcoadmin",
-        "hash" : "CaH/x9db8OjwgKN1sdlnIcSlnAVJpxzUj9h2d6jHwfYX2p5zIGSoKiBUz26kT8BuIDoa5c4UNTArTxa2Hl/kKpRbmLU+B1FmwNA/OxgKO6U+LX7IcR01Z94bwpCNX+X3dIykbwcOfTLULG7pO7eSMD+Hgcz62bwS/fmiHSiG7CM=",
+        "hash" : "YaqH+MFs4pZBl+1UrWiMmH1+SE/5AUvDhteQla3QtZfasMilth5xL6JiUBuOmZOQt2/YVVEfqLsWsA5BmmRzo4eO7QekSmjLPHEKJGHqech+dF6jOc8P7vfarf85AUeMK6ftS25mdY+tv50bLz68Byyc396I/EAN2LX0ekGfid4=",
+        "salt" : "xy/NWacURpfc1UKda1DHKzKcv7tTHk4nilCWJIL4MHAmloNO81HxG1Wb3jYBnHBvzQp7o0Qdb36gfngdFHU2XshRC+P0sOht/nTmwz8q+TJEAQMov327IB8VFGLXHJks",
         "firstName": "",
         "lastName": "",
         "email": "",
@@ -32,7 +33,9 @@
                         "value" : "-0500",
                         "operator" : "-",
                         "hours" : "05",
-                        "minutes" : "00"
+                        "minutes" : "00",
+                        "name" : "US/Central",
+                        "defaultRegion" : "USA"
                     },
                     "permissions" : {
                         "batchWeights": "false",
@@ -88,7 +91,9 @@
                         "value" : "-0500",
                         "operator" : "-",
                         "hours" : "05",
-                        "minutes" : "00"
+                        "minutes" : "00",
+                        "name" : "US/Central",
+                        "defaultRegion" : "USA"
                     },
                     "permissions" : {
                         "batchWeights": "false",

@@ -112,6 +112,8 @@ var mongo_transform = {
                 data = data.replace(/~Companies_products_ticket_settings_company_timeZone_operator~/g, transformMongoProperties.companyObj.products_ticket_settings_company_timeZone_operator);
                 data = data.replace(/~Companies_products_ticket_settings_company_timeZone_hours~/g, transformMongoProperties.companyObj.products_ticket_settings_company_timeZone_hours);
                 data = data.replace(/~Companies_products_ticket_settings_company_timeZone_minutes~/g, transformMongoProperties.companyObj.products_ticket_settings_company_timeZone_minutes);
+                data = data.replace(/~Companies_products_ticket_settings_company_timeZone_name~/g, transformMongoProperties.companyObj.products_ticket_settings_company_timeZone_name);
+                data = data.replace(/~Companies_products_ticket_settings_company_timeZone_defaultRegion~/g, transformMongoProperties.companyObj.products_ticket_settings_company_timeZone_defaultRegion);
 
                 data = data.replace(/~Companies_products_ticket_settings_company_supportEmail~/g, transformMongoProperties.companyObj.products_ticket_settings_company_supportEmail);
                 data = data.replace(/~Companies_products_ticket_settings_templates_type~/g, transformMongoProperties.companyObj.products_ticket_settings_templates_type);
@@ -148,6 +150,9 @@ var mongo_transform = {
                 data = data.replace(/~Companies_products_bulkticket_settings_company_timeZone_operator~/g, transformMongoProperties.companyObj.products_bulkticket_settings_company_timeZone_operator);
                 data = data.replace(/~Companies_products_bulkticket_settings_company_timeZone_hours~/g, transformMongoProperties.companyObj.products_bulkticket_settings_company_timeZone_hours);
                 data = data.replace(/~Companies_products_bulkticket_settings_company_timeZone_minutes~/g, transformMongoProperties.companyObj.products_bulkticket_settings_company_timeZone_minutes);
+                data = data.replace(/~Companies_products_bulkticket_settings_company_timeZone_name~/g, transformMongoProperties.companyObj.products_bulkticket_settings_company_timeZone_name);
+                data = data.replace(/~Companies_products_bulkticket_settings_company_timeZone_defaultRegion~/g, transformMongoProperties.companyObj.products_bulkticket_settings_company_timeZone_defaultRegion);
+
 
                 data = data.replace(/~Companies_products_bulkticket_settings_company_supportEmail~/g, transformMongoProperties.companyObj.products_bulkticket_settings_company_supportEmail);
                 data = data.replace(/~Companies_products_bulkticket_settings_templates_type~/g, transformMongoProperties.companyObj.products_bulkticket_settings_templates_type);

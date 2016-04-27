@@ -141,7 +141,9 @@
               "value": "~Companies_products_ticket_settings_company_timeZone_value~",
               "operator": "~Companies_products_ticket_settings_company_timeZone_operator~",
               "hours": "~Companies_products_ticket_settings_company_timeZone_hours~",
-              "minutes": "~Companies_products_ticket_settings_company_timeZone_minutes~"
+              "minutes": "~Companies_products_ticket_settings_company_timeZone_minutes~",
+              "name" : "~Companies_products_ticket_settings_company_timeZone_name~",
+              "defaultRegion" : "~Companies_products_ticket_settings_company_timeZone_defaultRegion~"
             },
             "supportEmail" : "~Companies_products_ticket_settings_company_supportEmail~"
           },
@@ -197,7 +199,9 @@
               "value": "~Companies_products_bulkticket_settings_company_timeZone_value~",
               "operator": "~Companies_products_bulkticket_settings_company_timeZone_operator~",
               "hours": "~Companies_products_bulkticket_settings_company_timeZone_hours~",
-              "minutes": "~Companies_products_bulkticket_settings_company_timeZone_minutes~"
+              "minutes": "~Companies_products_bulkticket_settings_company_timeZone_minutes~",
+              "name" : "~Companies_products_bulkticket_settings_company_timeZone_name~",
+              "defaultRegion" : "~Companies_products_bulkticket_settings_company_timeZone_defaultRegion~"
             },
             "supportEmail" : "~Companies_products_bulkticket_settings_company_supportEmail~"
           },

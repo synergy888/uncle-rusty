@@ -2,7 +2,6 @@
 
 var prompt = require('prompt');
 var config = require('./config-jade.js');
-var colors = require('colors');
 var util = require('./util/utils');
 var transform = require('./util/transform.js');
 var s3 = require('./util/s3.js');

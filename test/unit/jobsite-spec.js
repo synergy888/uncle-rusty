@@ -28,6 +28,10 @@ describe('Test Prompts', function(){
 			it('should return \'35245\' for edx gateway port', function(){
 				expect(transformProperties.companyObj.products_jobsite_settings_edxGatewayConfig_Port).equal('35245');
 			});
+
+			it('should match only numbers', function(){
+				expect(transformProperties.companyObj.products_jobsite_settings_edxGatewayConfig_Port).to.match(/^[0-9]*$/);
+			});
 		});
 	});
 });

@@ -19,6 +19,8 @@ module.exports = {
                 edx_gateway_ip: {
                     message: configPrompt.edx_gateway_ip,
                     default: edx_gateway_ip,
+                    //validator: /^((https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?) | (http:\/\/localhost)$/,
+                    //warning: 'Enter valid url.',
                     required: false
                 }
             }

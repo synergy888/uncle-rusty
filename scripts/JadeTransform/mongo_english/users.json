@@ -2,6 +2,7 @@
 	{
         "userName": "~Users_userName~",
         "hash" : "~Users_hash~",
+        "salt" : "~Users_salt~",
         "firstName": "~Users_firstName~",
         "lastName": "~Users_lastName~",
         "email": "~Users_email~",
@@ -32,7 +33,9 @@
                         "value" : "~Users_products_commerce_settings_timeZone_value~",
                         "operator" : "~Users_products_commerce_settings_timeZone_operator~",
                         "hours" : "~Users_products_commerce_settings_timeZone_hours~",
-                        "minutes" : "~Users_products_commerce_settings_timeZone_minutes~"
+                        "minutes" : "~Users_products_commerce_settings_timeZone_minutes~",
+                        "name" : "~Users_products_commerce_settings_timeZone_name~",
+                        "defaultRegion" : "~Users_products_commerce_settings_timeZone_defaultRegion~"
                     },
                     "permissions" : {
                         "batchWeights": "~Users_products_commerce_settings_permissions_batchWeights~",
@@ -88,7 +91,9 @@
                         "value" : "~Users_products_jobsite_settings_timeZone_value~",
                         "operator" : "~Users_products_jobsite_settings_timeZone_operator~",
                         "hours" : "~Users_products_jobsite_settings_timeZone_hours~",
-                        "minutes" : "~Users_products_jobsite_settings_timeZone_minutes~"
+                        "minutes" : "~Users_products_jobsite_settings_timeZone_minutes~",
+                        "name" : "~Users_products_jobsite_settings_timeZone_name~",
+                        "defaultRegion" : "~Users_products_jobsite_settings_timeZone_defaultRegion~"
                     },
                     "permissions" : {
                         "batchWeights": "~Users_products_jobsite_settings_permissions_batchWeights~",

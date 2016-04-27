@@ -12,8 +12,6 @@ describe('Test Prompts', function(){
 
 	describe('Mobile Commerce tests for new customer', function(){
 
-		// Version 1.2 has been pulled off. Removed all 1.2 test cases.
-
 		describe('System type', function(){
 			it('should match system type prompt text (Is this setup for a command series?)', function(){
 				expect(prompts.system_type.trim()).equal('Is this setup for a command series?'.trim());
@@ -33,6 +31,10 @@ describe('Test Prompts', function(){
 				expect(transformProperties.companyObj.products_commerce_settings_futureOrdersEmail_generateTime).equal('1127');
 			});
 
+			it('should match only numbers', function(){
+				expect(transformProperties.companyObj.products_commerce_settings_futureOrdersEmail_generateTime).to.match(/^[0-9]*$/);
+			});
+
 			it('should match future order email duration time prompt text (What is future orders email duration time period?)', function(){
 				expect(prompts.email_duration_period.trim()).equal('What is future orders email duration time period?'.trim());
 			});
@@ -40,6 +42,10 @@ describe('Test Prompts', function(){
 			it('should return \'3\' for future order email duration time', function(){
 				expect(transformProperties.companyObj.products_commerce_settings_futureOrdersEmail_durationTimePeriod).equal(3);
 			});
+
+            it('should match only numbers', function(){
+                expect(transformProperties.companyObj.products_commerce_settings_futureOrdersEmail_durationTimePeriod).to.match(/^[0-9]*$/);
+            });
 		});
 
 		describe('End point', function(){
@@ -58,6 +64,10 @@ describe('Test Prompts', function(){
 			it('should return \'35244\' for end point port', function(){
 				expect(transformProperties.companyObj.products_commerce_settings_edxGatewayConfig_Port).equal('35244');
 			});
+
+            it('should match only numbers', function(){
+                expect(transformProperties.companyObj.products_commerce_settings_edxGatewayConfig_Port).to.match(/^[0-9]*$/);
+            });
 		});
 
 		describe('Advance order request', function(){

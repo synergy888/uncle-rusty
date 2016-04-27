@@ -89,6 +89,7 @@ else {
 
                     auth.genHash(auth.genPass()).then(function(result){
                         configMongo.Users_hash = result.hash;
+                        configMongo.Users_salt = result.salt;
                     });
 
                     var new_or_existing = process.env.NEW_OR_EXISTING;

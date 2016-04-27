@@ -2,7 +2,7 @@
   {
     "code": "newco",
     "environment" : "alpha",
-    "description": "sdsdasdsdasd",
+    "description": "ddadadadadasdas",
     "status" : "y",
     "settings" : {
       "communications" : {
@@ -141,7 +141,9 @@
               "value": "0600",
               "operator": "-",
               "hours": "06",
-              "minutes": "00"
+              "minutes": "00",
+              "name" : "US/Central",
+              "defaultRegion" : "USA"
             },
             "supportEmail" : ""
           },
@@ -197,7 +199,9 @@
               "value": "0600",
               "operator": "-",
               "hours": "06",
-              "minutes": "00"
+              "minutes": "00",
+              "name" : "US/Central",
+              "defaultRegion" : "USA"
             },
             "supportEmail" : ""
           },

@@ -25,12 +25,20 @@ Please install node.js, mongodb to run the application and karma, mocha and chai
 * [Mocha.js] - Mocha is a JavaScript test framework running on node.js, featuring browser support, asynchronous testing, test coverage reports, and use of any assertion library.
 * [Chai.js] - Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework..
 
-### Installation
+### Installation (Prompts and Mongo)
 ```sh
 $ cd <project-folder> : application folder. e.g. c:\uncle-rusty is the <project-folder>.
 $ npm install : It installs everything required to run the application.
 $ cd scripts/JadeTransform : Change directory to main entry point.
 $ node run-mongo-import.js OR $ node run-mongo-import
+```
+
+### Installation (Promppts and Jade)
+```sh
+$ cd <project-folder> : application folder. e.g. c:\uncle-rusty is the <project-folder>.
+$ npm install : It installs everything required to run the application.
+$ cd scripts/JadeTransform : Change directory to main entry point.
+$ node run-jade-transfrom.js OR $ node run-jade-transfrom
 ```
 
 ### Examples
@@ -96,7 +104,7 @@ It is also possible that jade templates are in a different language.  Thus a use
 mongo_english_out is the location of the transformed .json mongo import files that are outputted to this folder when run-mongo-import is run.
 It is also possible that .json mongo import files are in a different language.  Thus a user can change it to mongo_spanish_out.
 
-### Config already rendered mongo meaning and their values
+### Config already rendered mongo meaning
 
 When you execute 'node run-mongo-import.js' a prompt will ask:
 "Output to folder only and do not import into mongo?";
@@ -104,7 +112,7 @@ This means that a process, will replace tokens with config values, in the source
 If the user enters y for output to folder only, the transformed mongo json files will not be imported into the mongo db.
 If the user enters n for output to folder only, the transformed mongo json files will be outputed to the folder and also imported into the mongo db.
 
-### Config already rendered jade meaning and their values
+### Config already rendered jade meaning
 
 When you execute "node run-jade-transform.js" it will ask the user:
 'Do you want to output the transformed .jade files to the local output folder ONLY?'
